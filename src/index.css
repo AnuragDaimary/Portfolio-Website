@@ -1,13 +1,45 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@layer base {
+  html {
+    @apply text-white;
+  }
+
+  body {
+    @apply overscroll-none;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .App {
+    @apply bg-primary h-screen flex flex-col
+  }
+
+  .nav {
+    @apply p-[91px] pb-0 flex justify-between
+  }
+
+  .nav-buttons {
+    @apply flex
+  }
+
+  #home {
+    @apply flex justify-center py-[260px] relative overflow-hidden h-full
+  }
+
+  .cards-container {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    @apply  overflow-x-auto overflow-y-hidden flex flex-nowrap absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[185px] gap-16
+}
+
+  .cards-container::-webkit-scrollbar {
+    @apply hidden;
+  }
+
+  .card {
+    @apply flex-0 font-bold text-6xl w-[370px] h-[600px] bg-white grid place-content-center whitespace-nowrap
+  }
 }
