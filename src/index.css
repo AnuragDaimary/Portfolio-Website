@@ -32,7 +32,7 @@
   .cards-container {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    @apply  overflow-x-auto overflow-y-hidden flex flex-nowrap absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[185px] gap-32
+    @apply  overflow-x-auto overflow-y-hidden flex flex-nowrap absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[185px] gap-32 transition-[transform] duration-500
 }
 
   .cards-container::-webkit-scrollbar {
