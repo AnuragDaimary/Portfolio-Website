@@ -4,10 +4,22 @@ const Home = () => {
   const projectNames = ["Loblaws", "Micro Animation", "Cura", "Sound Design", "Something"]
   let scrollPt = 0;
 
+  const detectedTrackPad = (event) => {
+    if (event.wheelDeltaY) {
+      if (event.wheelDeltaY === (event.deltaY * -3)) {
+        return true
+      }
+    }
+    else if (event.deltaMode === 0) {
+      return true;
+    }
+    return false;
+  }
+
   window.onwheel = (event) => {
     const { deltaX, deltaY } = event;
 
-    const scrollMultiplier = 1;
+    const scrollMultiplier = detectedTrackPad(event) ? 1 : 5;
     const projects = document.querySelector("#projects");
     
     const zero = 185;
