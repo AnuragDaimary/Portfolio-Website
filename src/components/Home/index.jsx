@@ -18,8 +18,9 @@ const Home = () => {
 
   window.onwheel = (event) => {
     const { deltaX, deltaY } = event;
+    const isTrackpad = detectedTrackPad(event);
 
-    const scrollMultiplier = detectedTrackPad(event) ? 1 : 5;
+    const scrollMultiplier = isTrackpad ? 1 : 5;
     const projects = document.querySelector("#projects");
     
     const zero = 185;
@@ -33,7 +34,11 @@ const Home = () => {
       scrollPt -= (increment * scrollMultiplier);
       scrollPt = Math.max(scrollPt, zero);
     }
-    projects.style.transform = `translate(-${scrollPt}px, -50%)`
+
+    if (isTrackpad) {
+      projects.style.transition = `none`;
+    }
+    projects.style.transform = `translate(-${scrollPt}px, -50%)`;
   }
 
   return(
