@@ -13,6 +13,9 @@ module.exports = {
       },
       colors: {
         'primary': "#252525"
+      },
+      transitionTimingFunction: {
+        "sexy-scroll": "cubic-bezier(.41,0,.5,1.05)"
       }
     },
   },

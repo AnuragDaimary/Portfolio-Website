@@ -32,7 +32,7 @@
   .cards-container {
     scrollbar-width: none;
     -ms-overflow-style: none;
-    @apply  overflow-x-auto overflow-y-hidden flex flex-nowrap absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[185px] gap-16
+    @apply  overflow-x-auto overflow-y-hidden flex flex-nowrap absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[185px] gap-32 transition-[transform] duration-500
 }
 
   .cards-container::-webkit-scrollbar {
@@ -40,6 +40,6 @@
   }
 
   .card {
-    @apply flex-0 font-bold text-6xl w-[370px] h-[600px] bg-white grid place-content-center whitespace-nowrap
+    @apply flex-0 font-bold text-6xl w-[370px] h-[600px] bg-white grid place-content-center whitespace-nowrap cursor-pointer
   }
 }
