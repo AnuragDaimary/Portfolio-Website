@@ -1,7 +1,9 @@
+import { useEffect, useState } from "react";
 import Card from "../Card";
 
 const Home = () => {
-  const projectNames = ["Loblaws", "Micro Animation", "Cura", "Sound Design", "Something"]
+  const projectNames = ["Loblaws", "Micro Animation", "Cura", "Sound Design", "Something"];
+  const [projectsContainer, setProjectsContainer] = useState(null);
   let scrollPt = 0;
 
   const detectedTrackPad = (event) => {
@@ -21,10 +23,9 @@ const Home = () => {
     const isTrackpad = detectedTrackPad(event);
 
     const scrollMultiplier = isTrackpad ? 1 : 5;
-    const projects = document.querySelector("#projects");
     
     const zero = 185;
-    const hundred = projects.clientWidth - zero; 
+    const hundred = projectsContainer.clientWidth - zero; 
     const increment = (hundred - zero) / 100;
     
     if (deltaY > 0 || deltaX > 0) {
@@ -35,11 +36,18 @@ const Home = () => {
       scrollPt = Math.max(scrollPt, zero);
     }
 
-    if (isTrackpad) {
-      projects.style.transition = `none`;
-    }
-    projects.style.transform = `translate(-${scrollPt}px, -50%)`;
+    projectsContainer.style.transform = `translate(-${scrollPt}px, -50%)`;
+
+    const keyframes = {
+      transform: `translate(-${scrollPt}px, -50%)`,
+    };
+
+    projectsContainer.animate(keyframes, { duration: 800, fill: "forwards" });
   }
+
+  useEffect(() => {
+    setProjectsContainer(document.querySelector("#projects"));
+  }, []);
 
   return(
     <div id="home">
