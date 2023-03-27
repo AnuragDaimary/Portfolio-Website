@@ -22,7 +22,7 @@ const Home = () => {
     const { deltaX, deltaY } = event;
     const isTrackpad = detectedTrackPad(event);
 
-    const scrollMultiplier = isTrackpad ? 1 : 5;
+    const scrollMultiplier = isTrackpad ? 1 : 8;
     
     const zero = 185;
     const hundred = projectsContainer.clientWidth - zero; 
