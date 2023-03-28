@@ -3,10 +3,10 @@ const Navigation = () => {
   <nav className="nav">
     <p>Anurag Daimary</p>
     <ul className="nav-buttons">
-      <li className="pr-[50px]">Work</li>
-      <li className="pl-[50px]">About</li>
+      <li>Work</li>
+      <li className="pl-[80px]">About</li>
+      <li className="pl-[80px]">Resume</li>
     </ul>
-    <button>Download Resume</button>
   </nav>
   )
 }

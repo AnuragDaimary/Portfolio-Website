@@ -9,10 +9,14 @@ module.exports = {
         "0": "0 0 auto"
       },
       fontFamily: {
-        'sans': ["Helvetica", "Arial", "sans-serif"]
+        'sans': ["Helvetica", "Arial", "sans-serif"],
+        'raleway': ["Raleway", "sans-serif"]
       },
       colors: {
-        'primary': "#252525"
+        'primary': "#111",
+        'custom': "#D47AFF",
+        'grad1': "#ED7CFF",
+        'grad2': "#A56FFF",
       },
       transitionTimingFunction: {
         "sexy-scroll": "cubic-bezier(.41,0,.5,1.05)"

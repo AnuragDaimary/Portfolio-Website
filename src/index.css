@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
 
 @layer base {
   html {
@@ -8,11 +9,23 @@
   }
 
   body {
-    @apply overscroll-none;
+    @apply overscroll-none overflow-hidden
+  }
+
+  h1 {
+    @apply text-[48px] pb-[50px] font-raleway
+  }
+
+  h2 {
+    @apply text-[64px] font-bold leading-[75px] font-raleway
   }
 }
 
 @layer components {
+  .clippy {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
   .App {
     @apply bg-primary h-screen flex flex-col
   }
@@ -26,7 +39,7 @@
   }
 
   #home {
-    @apply flex justify-center py-[260px] relative overflow-hidden h-full
+    @apply px-[90px] py-[260px] overflow-hidden h-full
   }
 
   .cards-container {
