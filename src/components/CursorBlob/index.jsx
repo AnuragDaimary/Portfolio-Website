@@ -1,5 +1,7 @@
 const CursorBlob = () => {
-  return <div id="blob" className="absolute rounded-full filter blur-[200px] h-[500px] w-[500px] bg-gradient-to-r from-grad1 to-grad2 translate-x-[-50%] translate-y-[-50%]"></div>
+  return (
+    <div id="blob" className="absolute rounded-full filter blur-[0px] h-[400px] w-[400px] bg-gradient-to-r from-grad1 to-grad2 animate-custom-spin"></div>
+  );
 }
 
 export default CursorBlob;

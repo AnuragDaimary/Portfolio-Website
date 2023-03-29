@@ -9,11 +9,12 @@ function App() {
     blob.animate({
       left: `${clientX}px`,
       top: `${clientY}px`,
-    }, { duration: 3000, fill: "forwards"});
+    }, { duration: 8000, fill: "forwards"});
   });
 
   return (
     <div className="App">
+      <div className='absolute top-0 left-0 h-full w-full z-[1] backdrop-blur-[200px]'></div>
       <Navigation />
       <Main />
       <CursorBlob />

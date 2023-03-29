@@ -11,7 +11,7 @@ const Main = () => {
 
   return (<>
     <section id="home">
-      <div className="relative z-[1]">
+      <div className="relative z-[2]">
         <h1>Hi, I am <span className="font-bold text-custom">Anurag</span>.</h1>
         <h2>
           <span className="block clippy">

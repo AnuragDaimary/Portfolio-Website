@@ -20,6 +20,16 @@ module.exports = {
       },
       transitionTimingFunction: {
         "sexy-scroll": "cubic-bezier(.41,0,.5,1.05)"
+      },
+      animation: {
+        "custom-spin": 'customSpin 10s linear infinite',
+      },
+      keyframes: {
+        customSpin: {
+          '0%': { transform: "translate(-50%, -50%) rotate(0deg)" },
+          '50%': { scale: "1 1.5" },
+          '100%': { transform: "translate(-50%, -50%) rotate(360deg)" },
+        }
       }
     },
   },

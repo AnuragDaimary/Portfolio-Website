@@ -1,6 +1,6 @@
 const Navigation = () => {
   return(
-  <nav className="nav">
+  <nav className="nav relative z-[2]">
     <p>Anurag Daimary</p>
     <ul className="nav-buttons">
       <li>Work</li>
