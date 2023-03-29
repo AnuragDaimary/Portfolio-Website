@@ -1,16 +1,26 @@
 import Navigation from './components/Navigation';
 import Main from "./components/Main";
 import CursorBlob from "./components/CursorBlob";
+import { useEffect } from 'react';
 
 function App() {
+
   document.addEventListener("mousemove", (event) => {
     const { clientX, clientY} = event;
+
     const blob = document.querySelector("#blob");
     blob.animate({
       left: `${clientX}px`,
       top: `${clientY}px`,
     }, { duration: 8000, fill: "forwards"});
   });
+
+  useEffect(() => {
+    const blob = document.querySelector("#blob");
+    blob.style.top = "50%";
+    blob.style.left = "50%";
+    blob.style.display = "block";
+  }, [])
 
   return (
     <div className="App">
