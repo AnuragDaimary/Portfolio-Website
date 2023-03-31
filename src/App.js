@@ -2,7 +2,6 @@ import Navigation from './components/Navigation';
 import Main from "./components/Main";
 import CursorBlob from "./components/CursorBlob";
 import { useEffect } from 'react';
-import Work from './components/Work';
 
 function App() {
 
