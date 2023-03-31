@@ -2,6 +2,7 @@ import Navigation from './components/Navigation';
 import Main from "./components/Main";
 import CursorBlob from "./components/CursorBlob";
 import { useEffect } from 'react';
+import Work from './components/Work';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     blob.animate({
       left: `${clientX}px`,
       top: `${clientY}px`,
-    }, { duration: 8000, fill: "forwards"});
+    }, { duration: 8000, easing: "ease-in", fill: "forwards"});
   });
 
   useEffect(() => {

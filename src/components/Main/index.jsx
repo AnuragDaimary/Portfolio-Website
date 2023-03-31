@@ -29,6 +29,7 @@ const Main = () => {
   return (<>
     <section id="home">
       <div className="relative z-[2]">
+<<<<<<< Updated upstream
         <h1>
           <span className="block clippy">
             {greeting.map((chunk, idx) => {
@@ -42,6 +43,10 @@ const Main = () => {
             })}
           </span>
           </h1>
+=======
+<<<<<<< Updated upstream
+        <h1>Hi, I am <span className="font-bold text-custom">Anurag</span>.</h1>
+>>>>>>> Stashed changes
         <h2>
           <span className="block clippy">
             {sentence1.map((chunk, idx) => {
@@ -49,9 +54,38 @@ const Main = () => {
             })}
           </span>
           <span className="block clippy">
+<<<<<<< Updated upstream
             {sentence2.map((chunk, idx) => {
               return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{...transitionProps, delay: 1.1 + (0.1 * idx)}}>{chunk}</motion.span>
             })}
+=======
+            <motion.span className="block" variants={sentence} initial="hidden" animate="visible" transition={{ease: [0.48,0.03,0.46,1.17], delay: 0.75, duration: 1 }}>and UX Researcher</motion.span>
+=======
+        <h1>
+          <span className="block clippy">
+            {greeting.map((chunk, idx) => {
+              let displayChunk = null;
+              if (chunk.startsWith("Anurag")) {
+                displayChunk = <span className="font-bold text-custom">{chunk}</span>
+              } else {
+                displayChunk = chunk;
+              }
+              return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{ease: [0.48,0.03,0.46,1.17], delay: 0.5 + (0.1 *idx), duration: 0.5}}>{displayChunk}</motion.span>
+            })}
+          </span>
+          </h1>
+        <h2>
+          <span className="block clippy">
+            {sentence1.map((chunk, idx) => {
+              return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{ease: [0.48,0.03,0.46,1.17], delay: 0.8 + (0.1 *idx), duration: 0.5}}>{chunk}</motion.span>
+            })}
+          </span>
+          <span className="block clippy">
+            {sentence2.map((chunk, idx) => {
+              return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{ease: [0.48,0.03,0.46,1.17], delay: 1.1 + (0.1 *idx), duration: 0.5}}>{chunk}</motion.span>
+            })}
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
           </span>
         </h2>
       </div>

@@ -5,7 +5,7 @@
 
 @layer base {
   html {
-    @apply text-white;
+    @apply text-white font-raleway;
   }
 
   body {
@@ -13,11 +13,11 @@
   }
 
   h1 {
-    @apply text-[48px] pb-[50px] font-raleway
+    @apply text-[48px] pb-[50px]
   }
 
   h2 {
-    @apply text-[64px] font-bold leading-[75px] font-raleway
+    @apply text-[64px] font-bold leading-[75px]
   }
 }
 
