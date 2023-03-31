@@ -22,7 +22,7 @@ const Navigation = () => {
   }
 
   return(
-  <nav className="nav relative z-[2]">
+  <nav className="nav">
     <motion.p {...animateProps} transition={transitionProps}>Anurag Daimary</motion.p>
     <ul className="nav-buttons">
       <motion.li {...animateProps} transition={{...transitionProps, delay: 2.05 }}>Work</motion.li>
