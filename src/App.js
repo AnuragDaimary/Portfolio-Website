@@ -2,6 +2,7 @@ import Navigation from './components/Navigation';
 import Main from "./components/Main";
 import CursorBlob from "./components/CursorBlob";
 import { useEffect } from 'react';
+import Work from './components/Work';
 
 function App() {
 
@@ -24,9 +25,10 @@ function App() {
 
   return (
     <div className="App">
-      <div className='absolute top-0 left-0 h-full w-full z-[1] backdrop-blur-[200px]'></div>
+      <div className='fixed top-0 left-0 h-full w-full z-[1] backdrop-blur-[200px]'></div>
       <Navigation />
       <Main />
+      <Work />
       <CursorBlob />
     </div>
   );

@@ -9,7 +9,7 @@
   }
 
   body {
-    @apply overscroll-none overflow-hidden
+    @apply overscroll-none bg-primary overflow-x-hidden
   }
 
   h1 {
@@ -19,6 +19,18 @@
   h2 {
     @apply text-[64px] font-bold leading-[75px]
   }
+
+  h3 {
+    @apply font-bold text-custom text-[32px] my-[150px]
+  }
+
+  h4 {
+    @apply font-bold text-[96px]
+  }
+
+  section {
+    @apply relative z-[2] px-[90px]
+  }
 }
 
 @layer components {
@@ -27,11 +39,11 @@
   }
   
   .App {
-    @apply bg-primary h-screen flex flex-col
+    @apply h-screen flex flex-col
   }
 
   .nav {
-    @apply px-[90px] pt-[45px] flex justify-between
+    @apply px-[90px] pt-[45px] flex justify-between fixed w-full z-[2]
   }
 
   .nav-buttons {
@@ -39,20 +51,40 @@
   }
 
   #home {
-    @apply px-[90px] py-[260px] overflow-hidden h-full
+    @apply py-[260px] overflow-hidden min-h-screen
+  }
+
+  .project {
+    @apply pl-[190px] flex mb-[250px]
   }
 
   .cards-container {
     scrollbar-width: none;
     -ms-overflow-style: none;
     @apply  overflow-x-auto overflow-y-hidden flex flex-nowrap absolute left-1/2 top-1/2 -translate-y-1/2 -translate-x-[185px] gap-32
-}
+  }
 
   .cards-container::-webkit-scrollbar {
     @apply hidden;
   }
 
   .card {
-    @apply flex-0 font-bold text-6xl w-[370px] h-[600px] bg-white grid place-content-center whitespace-nowrap cursor-pointer
+    @apply w-[400px] h-[500px] bg-white
+  }
+
+  .project-content {
+    @apply ml-[190px]
+  }
+  
+  .project-content-inverted {
+    @apply mr-[190px]
+  }
+
+  .skill-container {
+    @apply flex mt-[50px]
+  }
+
+  .skill {
+    @apply border rounded-[20px] px-[15px] py-[5px] mr-[20px]
   }
 }
