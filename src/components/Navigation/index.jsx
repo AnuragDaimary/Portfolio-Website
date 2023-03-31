@@ -1,16 +1,8 @@
-<<<<<<< Updated upstream
 import { motion } from "framer-motion"
 
 const Navigation = () => {
   const sentence = {
     hidden: { opacity: 0, y: -75},
-=======
-import { motion } from "framer-motion";
-
-const Navigation = () => {
-  const sentence = {
-    hidden: { opacity: 1, y: -75},
->>>>>>> Stashed changes
     visible: {
       opacity: 1,
       y: 0,
@@ -18,10 +10,6 @@ const Navigation = () => {
   }
 
   const animateProps = {
-<<<<<<< Updated upstream
-=======
-    className: "inline-block whitespace-pre",
->>>>>>> Stashed changes
     variants: sentence,
     initial: "hidden",
     animate: "visible",
@@ -30,12 +18,7 @@ const Navigation = () => {
   const transitionProps = {
     ease: [0.48,0.03,0.46,1.17],
     delay: 2,
-<<<<<<< Updated upstream
-    duration: 0.5,
-=======
-    duration: 1
-
->>>>>>> Stashed changes
+    duration: 1,
   }
 
   return(
