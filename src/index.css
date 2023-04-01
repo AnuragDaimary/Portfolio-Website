@@ -13,7 +13,7 @@
   }
 
   h1 {
-    @apply text-[48px] pb-[50px]
+    @apply text-[48px] mb-[50px]
   }
 
   h2 {

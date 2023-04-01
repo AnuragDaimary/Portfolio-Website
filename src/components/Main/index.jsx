@@ -28,19 +28,17 @@ const Main = () => {
 
   return (
     <section id="home">
-      <h1>
-        <span className="block clippy">
-          {greeting.map((chunk, idx) => {
-            let displayChunk = null;
-            if (chunk.startsWith("Anurag")) {
-              displayChunk = <span className="font-bold text-custom">{chunk}</span>
-            } else {
-              displayChunk = chunk;
-            }
-            return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{...transitionProps, delay: 0.5 + (0.1 * idx)}}>{displayChunk}</motion.span>
-          })}
-        </span>
-        </h1>
+      <h1 className="clippy">
+        {greeting.map((chunk, idx) => {
+          let displayChunk = null;
+          if (chunk.startsWith("Anurag")) {
+            displayChunk = <span className="font-bold text-custom">{chunk}</span>
+          } else {
+            displayChunk = chunk;
+          }
+          return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{...transitionProps, delay: 0.5 + (0.1 * idx)}}>{displayChunk}</motion.span>
+        })}
+      </h1>
       <h2>
         <span className="block clippy">
           {sentence1.map((chunk, idx) => {
