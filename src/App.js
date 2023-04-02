@@ -1,14 +1,13 @@
 import Navigation from './components/Navigation';
 import Main from "./components/Main";
 import CursorBlob from "./components/CursorBlob";
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import Work from './components/Work';
 
 function App() {
 
   document.addEventListener("mousemove", (event) => {
     const { clientX, clientY} = event;
-
     const blob = document.querySelector("#blob");
     blob.animate({
       left: `${clientX}px`,

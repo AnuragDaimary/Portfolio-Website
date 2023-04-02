@@ -34,6 +34,11 @@
 }
 
 @layer components {
+  #blob {
+    animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;
+  }
+
   .clippy {
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
   }
@@ -43,7 +48,7 @@
   }
 
   .nav {
-    @apply px-[90px] pt-[45px] flex justify-between fixed w-full z-[2]
+    @apply px-[90px] pt-[45px] flex justify-between fixed w-full z-[3]
   }
 
   .nav-buttons {
