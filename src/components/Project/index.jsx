@@ -46,8 +46,8 @@ const Project = ({ projectName, projectDesc, skills, inverted }) => {
         <div className="project-desc">{projectDesc.map((chunk, i) => <motion.p {...animateProps} transition={{...transitionProps, delay: 1.2 + (i * 0.1)}} key={`${chunk}-${i}`}>{chunk}</motion.p>)}</div>
         <div className="skill-container">
           {skills.map((skill, i) => (
-            <motion.span {...animateProps} transition={{...transitionProps, delay: 1.4 + (i*0.1)}}>
-              <Pill key={`${skill}-${i}`} skillName={skill} />
+            <motion.span key={`${skill}-${i}`} {...animateProps} transition={{...transitionProps, delay: 1.4 + (i*0.1)}}>
+              <Pill skillName={skill} />
             </motion.span>
           ))}
           <span ref={ref}></span>

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion"
+import Resume from "./AnuragDaimaryResume.pdf";
 
 const Navigation = () => {
   const sentence = {
@@ -27,7 +28,7 @@ const Navigation = () => {
     <ul className="nav-buttons">
       <motion.li {...animateProps} transition={{...transitionProps, delay: 2.05 }}>Work</motion.li>
       <motion.li {...animateProps} transition={{...transitionProps, delay: 2.1 }} className="pl-[80px]">About</motion.li>
-      <motion.li {...animateProps} transition={{...transitionProps, delay: 2.15 }} className="pl-[80px]">Resume</motion.li>
+      <motion.li {...animateProps} transition={{...transitionProps, delay: 2.15 }} className="pl-[80px]"><a href={Resume} target="_blank" rel="noopener noreferrer">Resume</a></motion.li>
     </ul>
   </nav>
   )
