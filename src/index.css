@@ -68,7 +68,7 @@
   }
 
   #about {
-    @apply pt-[260px] h-screen
+    @apply pt-[260px] min-h-screen
   }
 
   .about-desc {
