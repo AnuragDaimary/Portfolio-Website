@@ -25,7 +25,7 @@ const Project = ({ projectName, projectDesc, skills, inverted }) => {
 
   const transitionProps = {
     ease: [0.25, 0.13, 0.39, 1],
-    delay: 1,
+    delay: 0.5,
     duration: 0.75,
   }
 
@@ -43,6 +43,7 @@ const Project = ({ projectName, projectDesc, skills, inverted }) => {
       </motion.span>
       <div className={contentClassName}>
         <motion.h4 {...animateProps} transition={transitionProps}>{projectName}</motion.h4>
+        <span ref={ref}></span>
         <div className="project-desc">{projectDesc.map((chunk, i) => <motion.p {...animateProps} transition={{...transitionProps, delay: 1.2 + (i * 0.1)}} key={`${chunk}-${i}`}>{chunk}</motion.p>)}</div>
         <div className="skill-container">
           {skills.map((skill, i) => (
@@ -50,7 +51,6 @@ const Project = ({ projectName, projectDesc, skills, inverted }) => {
               <Pill skillName={skill} />
             </motion.span>
           ))}
-          <span ref={ref}></span>
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;600;700&display=swap');
 
 @layer base {
   html {
@@ -26,6 +26,14 @@
 
   h4 {
     @apply font-bold text-[96px]
+  }
+
+  h5 {
+    @apply font-bold text-[60px] ml-[50%] translate-x-[-50%]
+  }
+
+  h6 {
+    @apply text-[36px] font-semibold
   }
 
   section {
@@ -57,6 +65,22 @@
 
   #home {
     @apply py-[260px] overflow-hidden min-h-screen
+  }
+
+  #about {
+    @apply pt-[260px] h-screen
+  }
+
+  .about-desc {
+    @apply pb-[100px] text-[28px] font-semibold ml-[50%] translate-x-[-50%]
+  }
+
+  .about-section-container {
+    @apply mt-[150px]
+  }
+
+  .about-section {
+    @apply mb-[200px]
   }
 
   .project {

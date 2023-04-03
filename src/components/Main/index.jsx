@@ -17,9 +17,9 @@ const Main = () => {
   }
 
   const transitionProps = {
-    ease: [0.48,0.03,0.46,1.17],
+    ease: [0.25, 0.13, 0.39, 1],
     delay: 0.5,
-    duration: 0.5,
+    duration: 0.25,
   }
 
   const greeting = ["Hi, ", "I am ", "Anurag"];
