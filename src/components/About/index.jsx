@@ -6,7 +6,8 @@ const About = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
-  }, [])
+  }, []);
+  
   const sentence = {
     hidden: { opacity: 1, y: 75},
     visible: {
