@@ -113,6 +113,10 @@
     @apply flex mt-[50px]
   }
 
+  .section-hover {
+    @apply hover:text-section transition ease-in
+  }
+
   .skill {
     @apply border rounded-[20px] px-[15px] py-[5px] mr-[20px]
   }

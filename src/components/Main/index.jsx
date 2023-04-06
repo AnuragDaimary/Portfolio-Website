@@ -55,5 +55,4 @@ const Main = () => {
   );
 }
 
-// <motion.span className="block" variants={sentence} initial="hidden" animate="visible" transition={{ease: [0.48,0.03,0.46,1.17], delay: 0.5, duration: 1}}>User Experience Designer</motion.span>
 export default Main;

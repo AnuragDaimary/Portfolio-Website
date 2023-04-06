@@ -7,7 +7,7 @@ const About = () => {
     window.scrollTo(0, 0);
 
   }, []);
-  
+
   const sentence = {
     hidden: { opacity: 1, y: 75},
     visible: {
@@ -52,25 +52,24 @@ const About = () => {
         <AboutSection sectionName="Working Experience" sectionContent={
           <div className="flex-1">
             <h6>Designer • Certivity (Startup)</h6>
-            <p className="text-section">May 2018 - August 2018</p>
+            <p>May 2018 - August 2018</p>
           </div>
         } />
 
         <AboutSection sectionName="Get In Touch" sectionContent={
           <div className="flex-1">
-            <div><a href="mailto:anuragdaimary.work@gmail.com" className="text-section">Email</a></div>
-            <div><a href="https://linkedin.com/in/anuragdaimary/" target="_blank" rel="noopener noreferrer" className="text-section">LiknedIn</a></div>
-            <div><a href="https://behance.net/anuragdaimec03" target="_blank" rel="noopener noreferrer" className="text-section">Behance</a></div>
-            <div><a href="https://instagram.com/anurag.daimary/" target="_blank" rel="noopener noreferrer" className="text-section">Instagram</a></div>
+            <div><a href="mailto:anuragdaimary.work@gmail.com" className="section-hover">Email</a></div>
+            <div><a href="https://linkedin.com/in/anuragdaimary/" target="_blank" rel="noopener noreferrer" className="section-hover">LiknedIn</a></div>
+            <div><a href="https://behance.net/anuragdaimec03" target="_blank" rel="noopener noreferrer" className="section-hover">Behance</a></div>
+            <div><a href="https://instagram.com/anurag.daimary/" target="_blank" rel="noopener noreferrer" className="section-hover">Instagram</a></div>
           </div>
         } />
 
 
         <AboutSection sectionName="Credits" sectionContent={
           <div className="flex-1">
-            <h6>Pranshu Teotia</h6>
-            <p className="text-section">Development</p>
-            <div><a href="https://linkedin.com/in/pranshuteotia/" target="_blank" rel="noopener noreferrer" className="text-section">LiknedIn</a></div>
+            <h6>Pranshu Teotia • Developer</h6>
+            <div><a href="https://linkedin.com/in/pranshuteotia/" target="_blank" rel="noopener noreferrer" className="hover:text-section">LiknedIn</a></div>
           </div>
         } />
       </section>
