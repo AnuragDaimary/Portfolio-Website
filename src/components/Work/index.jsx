@@ -5,7 +5,7 @@ import Project from "../Project";
 import { useEffect } from "react";
 
 const Work = () => {
-  const [ref, inView] = useInView({ amount: 1 });
+  const [ref, inView] = useInView();
   const controls = useAnimation();
 
   const sentence = {
@@ -25,7 +25,7 @@ const Work = () => {
 
   const transitionProps = {
     ease: [0.25, 0.13, 0.39,1],
-    delay: 1,
+    delay: 0.5,
     duration: 0.75,
   }
 
