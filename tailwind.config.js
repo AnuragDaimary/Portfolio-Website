@@ -5,6 +5,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        "placeholder": "ulr('./images/placeholder.jpg')"
+      },
       flex: {
         "0": "0 0 auto"
       },
@@ -17,6 +20,8 @@ module.exports = {
         'custom': "#D47AFF",
         'grad1': "#ED7CFF",
         'grad2': "#A56FFF",
+        "white1": "rgba(255,255,255, 0.1)",
+        "white2": "rgba(255,255,255, 0.2)",
         'section': '#ADADAD',
       },
       transitionTimingFunction: {
