@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
-const Project = ({ projectName, projectDesc, skills, inverted }) => {
+const Project = ({ projectName, projectDesc, skills, inverted, btnDisabled=false }) => {
   const [ref, inView] = useInView({ amount: 1 });
   const controls = useAnimation();
 
@@ -52,7 +52,7 @@ const Project = ({ projectName, projectDesc, skills, inverted }) => {
             </motion.span>
           ))}
         </div>
-        <button><a href="/loblaws">Read Case Study</a></button>
+        {!btnDisabled && <motion.button {...animateProps} transition={{...transitionProps, delay: 1.8}}><a href="/loblaws">Read Case Study</a></motion.button>}
       </div>
     </div>
   )
