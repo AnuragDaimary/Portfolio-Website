@@ -87,6 +87,10 @@
     @apply pl-[190px] flex mb-[250px]
   }
 
+  .project button {
+    @apply py-[10px] px-[30px] border mt-[50px] rounded-[10px] font-semibold
+  }
+
   .cards-container {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -109,6 +113,10 @@
     @apply mr-[190px]
   }
 
+  .nice-text p {
+    @apply text-justify
+  }
+
   .skill-container {
     @apply flex mt-[50px]
   }
@@ -118,6 +126,6 @@
   }
 
   .skill {
-    @apply border rounded-[20px] px-[15px] py-[5px] mr-[20px]
+    @apply border rounded-[20px] px-[15px] py-[5px] mr-[20px] text-[#adadad] border-[#adadad]
   }
 }

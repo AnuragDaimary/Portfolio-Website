@@ -52,6 +52,7 @@ const Project = ({ projectName, projectDesc, skills, inverted }) => {
             </motion.span>
           ))}
         </div>
+        <button><a href="/loblaws">Read Case Study</a></button>
       </div>
     </div>
   )
