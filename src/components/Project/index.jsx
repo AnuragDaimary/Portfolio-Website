@@ -4,7 +4,7 @@ import { useInView } from "react-intersection-observer";
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
 
-const Project = ({ projectName, projectDesc, skills, inverted, btnDisabled=false }) => {
+const Project = ({ projectName, projectDesc, vidUrl, skills, inverted, btnDisabled=false }) => {
   const [ref, inView] = useInView({ amount: 1 });
   const controls = useAnimation();
 
@@ -39,7 +39,7 @@ const Project = ({ projectName, projectDesc, skills, inverted, btnDisabled=false
   return (
     <div className={`project ${inverted ? 'flex-row-reverse justify-end': ''}`}>
       <motion.span {...animateProps} transition={transitionProps}>
-        <Card />
+        <Card vidUrl={vidUrl}/>
       </motion.span>
       <div className={contentClassName}>
         <motion.h4 {...animateProps} transition={transitionProps}>{projectName}</motion.h4>
