@@ -6,7 +6,8 @@ const Card = ({ vidUrl }) => {
 
   const playVideo = () => {
     overlayRef.current.style.background = "transparent";
-    overlayRef.current.style.transition = "background 200ms ease-in-out"
+    overlayRef.current.style.transition = "background 200ms ease-in-out";
+    vidRef.current.muted = true;
     vidRef.current.play();
   }
   
@@ -19,7 +20,7 @@ const Card = ({ vidUrl }) => {
   return (
     <div className="card mt-[35px] relative" onMouseOver={playVideo} onMouseOut={pauseVideo}>
       <div ref={overlayRef} className="absolute top-0 left-0 h-full w-full bg-[#282828]"></div>
-      <video id="vid" ref={vidRef} autoPlay={true} style={{ height: "100%", objectFit: "cover"}}>
+      <video id="vid" ref={vidRef} style={{ height: "100%", objectFit: "cover"}}>
         <source src={vidUrl}></source>
       </video>
     </div>
