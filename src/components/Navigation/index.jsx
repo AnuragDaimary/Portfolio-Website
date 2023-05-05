@@ -27,9 +27,8 @@ const Navigation = () => {
     <nav className="nav">
       <motion.p {...animateProps} transition={transitionProps}><Link to="/">Anurag Daimary</Link></motion.p>
       <ul className="nav-buttons">
-        <motion.li {...animateProps} transition={{...transitionProps, delay: 2.05 }}>Work</motion.li>
-        <motion.li {...animateProps} transition={{...transitionProps, delay: 2.1 }} className="pl-[80px]"><Link to="/about">About</Link></motion.li>
-        <motion.li {...animateProps} transition={{...transitionProps, delay: 2.15 }} className="pl-[80px]"><a href={Resume} target="_blank" rel="noopener noreferrer">Resume</a></motion.li>
+        <motion.li {...animateProps} transition={{...transitionProps, delay: 2.05 }} className="pl-[80px]"><Link to="/about">About</Link></motion.li>
+        <motion.li {...animateProps} transition={{...transitionProps, delay: 2.1 }} className="pl-[80px]"><a href={Resume} target="_blank" rel="noopener noreferrer">Resume</a></motion.li>
       </ul>
     </nav>
   )
