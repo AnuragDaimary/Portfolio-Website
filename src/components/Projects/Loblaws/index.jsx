@@ -1,9 +1,22 @@
+import { useEffect, useRef } from "react";
 import LoblawsSection from "./LoblawsSection";
 
 const Loblaws = () => {
+  const vidRef = useRef(null);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    vidRef.current.muted = true;
+    setTimeout(() => vidRef.current.play(), 1000);
+    
+  }, [])
   return (
     <div>
-      <div className="h-screen w-screen bg-red-400 relative z-[2]"></div>
+      <div className="h-screen w-screen relative z-[2] bg-black">
+        <video ref={vidRef}>
+        <source src={`${process.env.PUBLIC_URL}/videos/Phone4K.mp4`}></source>
+        </video>
+      </div>
       <LoblawsSection id="01" heading="Loblaws" content={
         <div className="pl-[70px] nice-text">
           <p>Loblaws is Canada’s number one food distributor who are well known for their fresh produce. They have been in in the industry for around a hundred years now and is a trusted brand among consumers. They currently hold the highest market share in the Canadian retail food industry at 34.10 percent and provide both online and in person services. Their current business goal is to acquire new users and retain existing user to further strength market share. </p>
@@ -31,7 +44,7 @@ const Loblaws = () => {
       } />
 
       <LoblawsSection id="03" heading="Empathize" content={
-        <div className="pl-[70px] nice-text">
+        <div className="pl-[70px] pb-[100px] nice-text">
           <h4 className="text-[40px]">Research</h4>
 
           <h5 className="text-[36px] font-normal translate-x-0 m-0 mt-[50px]">Competitor Analysis</h5>

@@ -5,9 +5,6 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "placeholder": "ulr('./images/placeholder.jpg')"
-      },
       flex: {
         "0": "0 0 auto"
       },
