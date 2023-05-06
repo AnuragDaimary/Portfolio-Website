@@ -21,7 +21,7 @@
   }
 
   h3 {
-    @apply font-bold text-custom text-[32px] my-[150px]
+    @apply font-bold text-custom text-[32px] py-[150px]
   }
 
   h4 {
@@ -38,6 +38,10 @@
 
   section {
     @apply relative z-[2] px-[90px]
+  }
+
+  video {
+    @apply h-full object-cover w-full
   }
 }
 
@@ -102,7 +106,15 @@
   }
 
   .card {
-    @apply w-[400px] h-[500px] bg-[#111] hover:bg-transparent
+    @apply w-[400px] h-[500px] cursor-pointer
+  }
+
+  .card-overlay {
+    @apply absolute top-0 left-0 h-full w-full bg-cover z-[1] transition-[opacity] ease-in-out duration-300 opacity-100
+  }
+
+  .card-overlay:hover {
+    @apply opacity-0
   }
 
   .project-content {

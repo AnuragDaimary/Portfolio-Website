@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Loblaws from './components/Projects/Loblaws';
+import PageNotFound from './components/PageNotFound';
 
 function App() {
 
@@ -34,6 +35,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/loblaws' element={<Loblaws />} />
+        <Route path="*" element={<PageNotFound />} />
       </Routes>
       </Router>
       <CursorBlob />
