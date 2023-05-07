@@ -12,7 +12,7 @@ const Loblaws = () => {
   }, [])
   return (
     <div>
-      <div className="h-screen w-screen relative z-[2] bg-black">
+      <div className="h-screen w-screen relative z-[2]">
         <video ref={vidRef}>
         <source src={`${process.env.PUBLIC_URL}/videos/Phone4K.mp4`}></source>
         </video>

@@ -39,7 +39,7 @@ const Project = ({ projectName, projectDesc, imgName, vidUrl, skills, inverted, 
   return (
     <div className={`project ${inverted ? 'flex-row-reverse justify-end': ''}`}>
       <motion.span {...animateProps} transition={transitionProps}>
-        <Card imgName={projectName} vidUrl={vidUrl}/>
+        <Card imgName={projectName} vidUrl={vidUrl} disabled={projectName !== "Loblaws"}/>
       </motion.span>
       <div className={contentClassName}>
         <motion.h4 {...animateProps} transition={transitionProps}>{projectName}</motion.h4>

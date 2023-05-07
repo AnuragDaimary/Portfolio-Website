@@ -19,38 +19,31 @@ const Main = () => {
   const transitionProps = {
     ease: [0.25, 0.13, 0.39, 1],
     delay: 0.5,
-    duration: 0.25,
+    duration: 0.75,
   }
 
-  const greeting = ["Hi, ", "I am ", "Anurag"];
-  const sentence1 = ["User ", "Experience ", "Designer"];
-  const sentence2 = ["and ", "UX ",  "Researcher"];
+  const greeting = ["Hi, I am Anurag, a Product designer and UX Researcher", "making digital experiences for people with a user centric", "approach."]
 
   return (
     <section id="home">
-      <h1 className="clippy">
-        {greeting.map((chunk, idx) => {
-          let displayChunk = null;
-          if (chunk.startsWith("Anurag")) {
-            displayChunk = <span className="font-bold text-custom">{chunk}</span>
+      <h1>
+        {greeting.map((chunk, i) =>{
+          let parsedChunk = null;
+          if (chunk.includes("Anurag")) {
+            parsedChunk = chunk.split("Anurag");
+            parsedChunk = <><>{parsedChunk[0]}</><span className="font-bold text-custom">Anurag</span><>{parsedChunk[1]}</></>
           } else {
-            displayChunk = chunk;
+            parsedChunk = <>{chunk}</>
           }
-          return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{...transitionProps, delay: 0.5 + (0.1 * idx)}}>{displayChunk}</motion.span>
-        })}
+
+          return (
+          <span key={`greeting-${i}`} className="block clippy">
+            <motion.span {...animateProps} transition={{...transitionProps, delay: 0.5 + (0.2 * i)}}>
+              {parsedChunk}
+            </motion.span>
+          </span>);
+      })}
       </h1>
-      <h2>
-        <span className="block clippy">
-          {sentence1.map((chunk, idx) => {
-            return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{...transitionProps, delay: 0.8 + (0.1 * idx)}}>{chunk}</motion.span>
-          })}
-        </span>
-        <span className="block clippy">
-          {sentence2.map((chunk, idx) => {
-            return <motion.span {...animateProps} key={`${chunk}-${idx}`} transition={{...transitionProps, delay: 1.1 + (0.1 * idx)}}>{chunk}</motion.span>
-          })}
-        </span>
-      </h2>
     </section>
   );
 }

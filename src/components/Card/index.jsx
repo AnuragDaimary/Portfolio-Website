@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
-const Card = ({ vidUrl, imgName }) => {
+const Card = ({ vidUrl, imgName, disabled=false }) => {
   const vidRef = useRef(null);
   const overlayRef = useRef(null);
   const navigate = useNavigate();
@@ -22,7 +22,7 @@ const Card = ({ vidUrl, imgName }) => {
     <div className="card mt-[35px] relative" onMouseOver={playVideo} onMouseOut={pauseVideo}>
       <div ref={overlayRef} style={{
         backgroundImage: `url(${bg2})`
-      }} className="card-overlay" onClick={() => navigate(`/${imgName.toLowerCase()}`)}></div>
+      }} className={`card-overlay ${!disabled && "hover:opacity-0"}`}onClick={() => navigate(`/${imgName.toLowerCase()}`)}></div>
       <video ref={vidRef}>
         <source src={vidUrl}></source>
       </video>
