@@ -13,7 +13,7 @@
   }
 
   h1 {
-    @apply text-[48px] mb-[50px]
+    @apply text-[48px] mb-[50px] font-semibold m-auto
   }
 
   h2 {
@@ -41,7 +41,7 @@
   }
 
   video {
-    @apply h-full object-cover w-full
+    @apply h-full object-cover w-full bg-transparent
   }
 }
 
@@ -68,7 +68,7 @@
   }
 
   #home {
-    @apply py-[260px] overflow-hidden min-h-screen
+    @apply py-[260px] overflow-hidden min-h-screen grid
   }
 
   #about {
@@ -111,10 +111,6 @@
 
   .card-overlay {
     @apply absolute top-0 left-0 h-full w-full bg-cover z-[1] transition-[opacity] ease-in-out duration-300 opacity-100
-  }
-
-  .card-overlay:hover {
-    @apply opacity-0
   }
 
   .project-content {

@@ -28,25 +28,28 @@ const About = () => {
     duration: 1,
   }
 
-  const aboutSection1 = ["I am a UX Designer and Researcher based", "in Toronto. I create digital experiences for", "people with a user centric approach."]
-  const aboutSection2 = ["I specialize in visual design with a strong", "focus on user research and interaction."]
+  const aboutSections = [
+    ["I am a Product Designer and UX Researcher", "from Toronto. I create digital experiences for", "people with a user centric approach."],
+    ["I specialize in visual design with a strong", "focus on user research and interaction."],
+    ["I like working with design systems and get", "excited over new or updates to existing", "design tools."],
+    ["Passionate about computer and audio", "hardware, video game enthusiast and", "a hobby musician."]
+  ];
+
+  const socialArray = [
+    ["mailto:anuragdaimary.work@gmail.com", "Email"],
+    ["https://linkedin.com/in/anuragdaimary/", "LinkedIn"],
+    ["https://behance.net/anuragdaimec03", "Behance"],
+    ["https://instagram.com/anurag.daimary/", "Instagram"],
+  ]
+  
   return (
     <>
       <section id="about">
-      <div className="about-desc">
-        {aboutSection1.map((chunk, idx) => {
-          return <span className="block clippy flex-1" key={`${chunk}-${idx}`}>
-            <motion.p {...animateProps1} transition={{...transitionProps, delay: 0.5 + (0.2 * idx)}}>{chunk}</motion.p>
-          </span>
-        })}
-      </div>
-      <div className="about-desc">
-        {aboutSection2.map((chunk, idx) => {
-            return <span className="block clippy flex-1" key={`${chunk}-${idx}`}>
-              <motion.p {...animateProps1} transition={{...transitionProps, delay: 1 + (0.2 * idx)}}>{chunk}</motion.p>
-            </span>
-          })}
-      </div>
+        {aboutSections.map((abtSection, i) => <div key={`abt-section-${i}`} className="about-desc">
+        {abtSection.map((chunk, idx) => <span className="block clippy flex-1" key={`${chunk}-${idx}`}>
+              <motion.p {...animateProps1} transition={{...transitionProps, delay: (0.5 + (i * 0.35))  + (0.2 * idx)}}>{chunk}</motion.p>
+            </span>)}
+        </div>)}
       </section>
       <section className="about-section-container">
         <AboutSection sectionName="Working Experience" sectionContent={
@@ -58,10 +61,14 @@ const About = () => {
 
         <AboutSection sectionName="Get In Touch" sectionContent={
           <div className="flex-1">
-            <div><a href="mailto:anuragdaimary.work@gmail.com" className="section-hover">Email</a></div>
-            <div><a href="https://linkedin.com/in/anuragdaimary/" target="_blank" rel="noopener noreferrer" className="section-hover">LiknedIn</a></div>
-            <div><a href="https://behance.net/anuragdaimec03" target="_blank" rel="noopener noreferrer" className="section-hover">Behance</a></div>
-            <div><a href="https://instagram.com/anurag.daimary/" target="_blank" rel="noopener noreferrer" className="section-hover">Instagram</a></div>
+            {socialArray.map(([link, social], i) => {
+              const props = { target: "_blank", rel: "noopener noreferrer"}
+              if (social === "Email") {
+                return <motion.div {...animateProps1} transition={{...transitionProps, delay: 0.5 + (i*0.3)}}><a href={link} className="section-hover">{social}</a></motion.div>
+              } else {
+                return <motion.div {...animateProps1} transition={{...transitionProps, delay: 0.5 + (i*0.3)}}><a {...props} href={link} className="section-hover">{social}</a></motion.div>
+              }
+            })}
           </div>
         } />
 
@@ -69,7 +76,7 @@ const About = () => {
         <AboutSection sectionName="Credits" sectionContent={
           <div className="flex-1">
             <h6>Pranshu Teotia • Developer</h6>
-            <div><a href="https://linkedin.com/in/pranshuteotia/" target="_blank" rel="noopener noreferrer" className="hover:text-section">LiknedIn</a></div>
+            <div><a href="https://linkedin.com/in/pranshuteotia/" target="_blank" rel="noopener noreferrer" className="hover:text-section">LinkedIn</a></div>
           </div>
         } />
       </section>
