@@ -104,7 +104,7 @@ const Loblaws = () => {
           </div>
 
           <h5 className="text-[36px] font-normal translate-x-0 m-0 mt-[100px] mb-12">User Persona</h5>
-          <img src={persona} alt="Persona image" />
+          <img src={persona} alt="Persona" />
           <p className="mt-[30px]">Using the data gathered from the interviews, We created a user persona which represented our target audience. Moving forward, we catered our design solutions to this persona to be sure of who we are designing for and not get sidetracked.</p>
           
           <h5 className="text-[36px] font-normal translate-x-0 m-0 mt-[100px] mb-12">Journey Map</h5>
@@ -154,7 +154,7 @@ const Loblaws = () => {
 
           <p className="mt-12">A working Low fidelity prototype was made on Figma which demonstrated early version how the app will look and feel like to the users. This mockup only included essential systems like the task flow and functionality and was without any styling and branding. We used this to conduct several usability tests with people to identify issues early and go back to the drawing board before we move on to high fidelity mockups and prototypes.</p>
           <div className="grid place-items-center my-12">
-            <a target="_blank" rel="noopener noreferred" className="border rounded-xl px-6 py-4 my-8" href="https://www.figma.com/proto/8f2ilOGvvcQIHV5KFJGBIf/Loblaws-UI?page-id=0%3A1&type=design&node-id=1-21600&viewport=3455%2C-1436%2C0.21&scaling=scale-down&starting-point-node-id=1%3A23571&show-proto-sidebar=1">Click here to go to Prototype</a>
+            <a target="_blank" rel="noopener noreferrer" className="border rounded-xl px-6 py-4 my-8" href="https://www.figma.com/proto/8f2ilOGvvcQIHV5KFJGBIf/Loblaws-UI?page-id=0%3A1&type=design&node-id=1-21600&viewport=3455%2C-1436%2C0.21&scaling=scale-down&starting-point-node-id=1%3A23571&show-proto-sidebar=1">Click here to go to Prototype</a>
             <p>You can test out the live Figma mockup yourself if you want as well !</p>
           </div>
         </div>
