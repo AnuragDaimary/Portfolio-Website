@@ -41,9 +41,11 @@ const Work = () => {
         <motion.span {...animateProps} transition={transitionProps}>Selected Work</motion.span>
         <span ref={ref}></span>
       </h3> 
-      <Project projectName="Loblaws" vidUrl={`${process.env.PUBLIC_URL}/videos/WithColor4K.mov`} projectDesc={["Re-designing the digital experience of Canada's leading","supermarket chain with usability in mind"]} skills={["UX Research", "UI/UX Design", "Case Study"]} />
-      <Project btnDisabled projectName="Cura" projectDesc={["Healthcare system bridging the distance between woman", "living in remote communities and accessible parental care", "using modern day biotechnology"]} skills={["UX Research", "UI/UX Design"]} inverted />
-      <Project btnDisabled projectName="Presto" projectDesc={["Wearable concept for electronic payment system of Toronto’s", "public transit system"]} skills={["UI Design"]} />
+      <div className="flex flex-col items-center">
+        <Project projectName="Loblaws" vidUrl={`${process.env.PUBLIC_URL}/videos/WithColor4K.mov`} projectDesc={["Re-designing the digital experience of Canada's leading","supermarket chain with usability in mind"]} skills={["UX Research", "UI/UX Design", "Case Study"]} />
+        <Project btnDisabled projectName="Cura" projectDesc={["Healthcare system bridging the distance between woman", "living in remote communities and accessible parental care", "using modern day biotechnology"]} skills={["UX Research", "UI/UX Design"]} inverted />
+        <Project btnDisabled projectName="Presto" projectDesc={["Wearable concept for electronic payment system of Toronto’s", "public transit system"]} skills={["UI Design"]} />
+      </div>
     </section>
   )
 }
