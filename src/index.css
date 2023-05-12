@@ -21,7 +21,7 @@
   }
 
   h3 {
-    @apply font-bold text-custom text-[32px] py-[150px]
+    @apply font-bold text-custom text-[32px] pt-[150px] pb-[75px]
   }
 
   h4 {

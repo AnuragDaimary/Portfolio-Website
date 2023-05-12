@@ -16,12 +16,12 @@ const Card = ({ vidUrl, imgName, disabled=false }) => {
     vidRef.current.currentTime = 0;
   }
 
-  const bg2 = require(`../../images/${imgName}.png`);
+  const projectImage = require(`../../images/${imgName}.webp`);
 
   return (
     <div className="card mt-[35px] relative" onMouseOver={playVideo} onMouseOut={pauseVideo}>
       <div ref={overlayRef} style={{
-        backgroundImage: `url(${bg2})`
+        backgroundImage: `url(${projectImage})`
       }} className={`card-overlay ${!disabled && "hover:opacity-0"}`}onClick={() => navigate(`/${imgName.toLowerCase()}`)}></div>
       <video ref={vidRef}>
         <source src={vidUrl}></source>
