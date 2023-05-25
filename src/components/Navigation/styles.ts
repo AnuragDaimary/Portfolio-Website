@@ -34,7 +34,7 @@ const useStyles = createUseStyles({
   },
   mobileMenuContainer: {
     boxSizing: "border-box",
-    position: "absolute",
+    position: "fixed",
     top: 0,
     let: 0,
     width: "100vw",

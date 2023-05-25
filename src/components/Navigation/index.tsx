@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import useStyles from "./styles";
 import useIsMobileView from "hooks/useIsMobileView";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -52,18 +52,58 @@ const MobileNavigationContainer: React.FC<MobileNavigationContainerProps> = ({
   );
 };
 
+interface MobileNavigationProps {
+  setIsMenuOpen: () => void;
+}
+
+const MobileNavigation: React.FC<MobileNavigationProps> = ({
+  setIsMenuOpen,
+}) => {
+  const scrollPosition = React.useRef({
+    top: window.scrollY,
+    left: window.scrollX,
+  });
+  const {
+    mobileMenuContainer,
+    mobileMenuCloseButton,
+    mobileMenuHeading,
+    mobileNavItemsContainer,
+    mobileNavItem,
+  } = useStyles();
+
+  const disableScroll = useCallback(
+    (e: Event) => {
+      const { top, left } = scrollPosition.current;
+      window.scrollTo(left, top);
+    },
+    [scrollPosition]
+  );
+
+  React.useEffect(() => {
+    window.addEventListener("scroll", disableScroll);
+
+    return () => {
+      window.removeEventListener("scroll", disableScroll);
+    };
+  }, [disableScroll]);
+
+  return (
+    <div className={mobileMenuContainer}>
+      <button className={mobileMenuCloseButton} onClick={setIsMenuOpen}>
+        <FontAwesomeIcon icon={faXmark} />
+      </button>
+      <h2 className={mobileMenuHeading}>Menu</h2>
+      <ul className={mobileNavItemsContainer}>
+        <NavigationItems className={mobileNavItem} />
+      </ul>
+    </div>
+  );
+};
+
 const Navigation: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const {
-    nav,
-    desktopNavItemsContainer,
-    mobileMenuContainer,
-    mobileMenuCloseButton,
-    mobileNavItemsContainer,
-    mobileNavItem,
-    mobileMenuHeading,
-  } = useStyles();
+  const { nav, desktopNavItemsContainer } = useStyles();
   const isMobileView = useIsMobileView();
 
   const renderDesktopNavigation = () => {
@@ -71,23 +111,6 @@ const Navigation: React.FC = () => {
       <ul className={desktopNavItemsContainer}>
         <NavigationItems />
       </ul>
-    );
-  };
-
-  const renderMobileNavigation = () => {
-    return (
-      <div className={mobileMenuContainer}>
-        <button
-          className={mobileMenuCloseButton}
-          onClick={() => setIsMenuOpen(false)}
-        >
-          <FontAwesomeIcon icon={faXmark} />
-        </button>
-        <h2 className={mobileMenuHeading}>Menu</h2>
-        <ul className={mobileNavItemsContainer}>
-          <NavigationItems className={mobileNavItem} />
-        </ul>
-      </div>
     );
   };
 
@@ -101,7 +124,9 @@ const Navigation: React.FC = () => {
           renderDesktopNavigation()
         )}
       </nav>
-      {isMobileView && isMenuOpen && renderMobileNavigation()}
+      {isMobileView && isMenuOpen && (
+        <MobileNavigation setIsMenuOpen={() => setIsMenuOpen(false)} />
+      )}
     </>
   );
 };

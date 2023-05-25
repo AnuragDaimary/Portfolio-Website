@@ -3,6 +3,7 @@ import "./App.css";
 import Blob from "components/Blob";
 import Navigation from "components/Navigation";
 import Main from "components/Main";
+import SelectedWork from "components/SelectedWork";
 
 const App: React.FC = () => {
   return (
@@ -10,6 +11,7 @@ const App: React.FC = () => {
       <Navigation />
       <div className="container">
         <Main />
+        <SelectedWork />
       </div>
       <Blob />
     </div>

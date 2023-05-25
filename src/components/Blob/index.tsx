@@ -2,7 +2,7 @@ import React from "react";
 import useStyles from "./styles";
 
 const Blob: React.FC = () => {
-  const { blobScreen, blob } = useStyles();
+  const { blobScreen, blob, blobContainer } = useStyles();
   const blobRef = React.useRef<HTMLDivElement>(null);
 
   const mouseMove = (e: any) => {
@@ -24,10 +24,10 @@ const Blob: React.FC = () => {
     };
   }, []);
   return (
-    <>
+    <div className={blobContainer}>
       <div className={blobScreen}></div>
       <div ref={blobRef} className={blob}></div>
-    </>
+    </div>
   );
 };
 

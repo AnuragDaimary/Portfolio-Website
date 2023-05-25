@@ -24,6 +24,15 @@ const useStyles = createUseStyles({
     translate: "-50% -50%",
     zIndex: -2,
     animation: "$rotate 5s linear infinite",
+  },
+  blobContainer: {
+    overflow: "hidden",
+    zIndex: -1,
+    position: "fixed",
+    top: 0,
+    left: 0,
+    height: "100vh",
+    width: "100vw",
   }
 })
 
