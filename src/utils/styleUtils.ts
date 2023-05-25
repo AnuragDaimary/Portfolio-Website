@@ -1,5 +1,11 @@
 export const SCREENS = {
   Mobile: 480,
   Tablet: 768,
-  Laptops: 1024,
+  Laptop: 1350,
+}
+
+export const SCREEN_TYPE = {
+  Mobile: "Mobile",
+  Tablet: "Tablet",
+  Laptop: "Laptop",
 }

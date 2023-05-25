@@ -24,8 +24,8 @@ interface NavigationItemsProps {
 const NavigationItems: React.FC<NavigationItemsProps> = ({ className }) => {
   return (
     <>
-      {navigationSections.map(({ href, label }) => (
-        <li>
+      {navigationSections.map(({ href, label }, idx) => (
+        <li key={`navigation-item-${idx}`}>
           <a className={className} href={href}>
             {label}
           </a>

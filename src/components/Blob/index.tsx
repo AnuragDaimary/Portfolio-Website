@@ -17,10 +17,10 @@ const Blob: React.FC = () => {
   };
 
   React.useEffect(() => {
-    window.addEventListener("mousemove", mouseMove);
+    window.addEventListener("pointermove", mouseMove);
 
     return () => {
-      window.removeEventListener("mousemove", mouseMove);
+      window.removeEventListener("pointermove", mouseMove);
     };
   }, []);
   return (

@@ -2,6 +2,9 @@ import { createUseStyles } from "react-jss";
 
 const useStyles = createUseStyles({
   nav: {
+    position: "fixed",
+    left: 0,
+    right: 0,
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
