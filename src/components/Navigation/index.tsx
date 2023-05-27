@@ -3,18 +3,27 @@ import useStyles from "./styles";
 import useIsMobileView from "hooks/useIsMobileView";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import Resume from "assets/AnuragDaimaryResume.pdf";
 
 const navigationSections = [
   {
-    href: "#selectedWork",
+    props: {
+      href: "#selectedWork",
+    },
     label: "Work",
   },
   {
-    href: "#",
+    props: {
+      href: "#",
+    },
     label: "About",
   },
   {
-    href: "#",
+    props: {
+      href: Resume,
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
     label: "Resume",
   },
 ];
@@ -24,9 +33,9 @@ interface NavigationItemsProps {
 const NavigationItems: React.FC<NavigationItemsProps> = ({ className }) => {
   return (
     <>
-      {navigationSections.map(({ href, label }, idx) => (
+      {navigationSections.map(({ props, label }, idx) => (
         <li key={`navigation-item-${idx}`}>
-          <a className={className} href={href}>
+          <a className={className} {...props}>
             {label}
           </a>
         </li>
