@@ -10,7 +10,9 @@ const SelectedWork: React.FC = () => {
     useStyles();
   return (
     <section className={selectedWorkContainer}>
-      <h2 className={selectedWorkHeading}>Selected Work</h2>
+      <h2 id="selectedWork" className={selectedWorkHeading}>
+        Selected Work
+      </h2>
       <div className={projectsContainer}>
         <Project
           name="Loblaws"

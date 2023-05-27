@@ -6,7 +6,7 @@ import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 
 const navigationSections = [
   {
-    href: "#",
+    href: "#selectedWork",
     label: "Work",
   },
   {
