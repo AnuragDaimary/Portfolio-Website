@@ -126,7 +126,9 @@ const Navigation: React.FC = () => {
   return (
     <>
       <nav className={nav}>
-        <p>Anurag Daimary</p>
+        <p>
+          <a href="/">Anurag Daimary</a>
+        </p>
         {isMobileView ? (
           <MobileNavigationContainer onClick={() => setIsMenuOpen(true)} />
         ) : (

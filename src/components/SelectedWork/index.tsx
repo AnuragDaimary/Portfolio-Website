@@ -2,6 +2,7 @@ import React from "react";
 import useStyles from "components/SelectedWork/styles";
 import Project from "components/Project";
 import Loblaws from "assets/images/Loblaws.webp";
+import LoblawsIntroVideo from "assets/videos/LoblawsIntro.mov";
 import Cura from "assets/images/Cura.webp";
 import Presto from "assets/images/Presto.webp";
 
@@ -22,6 +23,7 @@ const SelectedWork: React.FC = () => {
           ]}
           skills={["UX Research", "UI/UX Design", "Case Study"]}
           img={Loblaws}
+          video={LoblawsIntroVideo}
         />
 
         <Project

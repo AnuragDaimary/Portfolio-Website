@@ -1,5 +1,9 @@
 import { createUseStyles } from "react-jss";
 
+interface StyleProps {
+  video?: string;
+}
+
 const useStyles = createUseStyles({
   projectContainer: {
     margin: ["4rem", "auto"],
@@ -7,14 +11,28 @@ const useStyles = createUseStyles({
     flexDirection: "column",
   },
   imgContainer: {
+    position: "relative",
     width: "100%",
     maxWidth: "350px",
     height: "450px",
     margin: "auto",
-    "& img": {
-      width: "100%",
-      height: "100%",
+  },
+  projectImage: ({ video }: StyleProps) => ({
+    position: "absolute",
+    left: 0,
+    top: 0,
+    width: "100%",
+    height: "100%",
+    zIndex: 1,
+    transition: ["opacity", "250ms", "ease-in"],
+    "&:hover": {
+      opacity: video ? 0 : 1,
     }
+  }),
+  projectVideo: {
+    height: "100%",
+    width: "100%",
+    objectFit: "cover",
   },
   projectName: {
     fontSize: "56px",
@@ -56,6 +74,12 @@ const useStyles = createUseStyles({
       textDecoration: "none"
     }
   },
+  overlayText: {
+    position: "absolute",
+    bottom: "20px",
+    left: "50%",
+    translate: "-50%"
+  },
   "@media (min-width: 750px)": {
     projectContainer: {
       flexDirection: "row",
@@ -72,7 +96,7 @@ const useStyles = createUseStyles({
     },
     skillsContainer: {
       justifyContent: "flex-start"
-    }
+    },
   },
 });
 
