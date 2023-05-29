@@ -7,6 +7,7 @@ import SelectedWork from "components/SelectedWork";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import About from "components/About";
 import PageNotFound from "components/PageNotFound";
+import Loblaws from "components/Loblaws";
 
 const App: React.FC = () => {
   return (
@@ -25,6 +26,7 @@ const App: React.FC = () => {
               }
             />
             <Route path="/about" element={<About />} />
+            <Route path="/loblaws" element={<Loblaws />} />
             <Route path="*" element={<PageNotFound />} />
           </Routes>
         </div>

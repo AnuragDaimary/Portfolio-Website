@@ -24,6 +24,7 @@ const SelectedWork: React.FC = () => {
           skills={["UX Research", "UI/UX Design", "Case Study"]}
           img={Loblaws}
           video={LoblawsIntroVideo}
+          link="/loblaws"
         />
 
         <Project

@@ -2,6 +2,7 @@ import { createUseStyles } from "react-jss";
 
 interface StyleProps {
   video?: string;
+  link?: string;
 }
 
 const useStyles = createUseStyles({
@@ -17,7 +18,7 @@ const useStyles = createUseStyles({
     height: "450px",
     margin: "auto",
   },
-  projectImage: ({ video }: StyleProps) => ({
+  projectImage: ({ video, link }: StyleProps) => ({
     position: "absolute",
     left: 0,
     top: 0,
@@ -25,6 +26,7 @@ const useStyles = createUseStyles({
     height: "100%",
     zIndex: 1,
     transition: ["opacity", "250ms", "ease-in"],
+    cursor: link ? "pointer" : "default",
     "&:hover": {
       opacity: video ? 0 : 1,
     }

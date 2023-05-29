@@ -1,5 +1,6 @@
 import React from "react";
 import useStyles from "components/Project/styles";
+import { useNavigate } from "react-router-dom";
 
 interface ProjectProps {
   name: string;
@@ -16,9 +17,10 @@ const Project: React.FC<ProjectProps> = ({
   link = undefined,
   skills,
   img,
-  video,
+  video = undefined,
 }) => {
   const projectVideoRef = React.useRef<HTMLVideoElement>(null);
+  const navigate = useNavigate();
 
   const {
     projectContainer,
@@ -32,7 +34,13 @@ const Project: React.FC<ProjectProps> = ({
     projectImage,
     projectVideo,
     overlayText,
-  } = useStyles({ video });
+  } = useStyles({ video, link });
+
+  const handleProjectClick = () => {
+    if (link) {
+      navigate(link);
+    }
+  };
 
   React.useEffect(() => {
     if (projectVideoRef.current) {
@@ -44,6 +52,7 @@ const Project: React.FC<ProjectProps> = ({
     <div className={projectContainer}>
       <div
         className={imgContainer}
+        onClick={handleProjectClick}
         onMouseOver={() => projectVideoRef.current?.play()}
         onMouseOut={() => {
           if (projectVideoRef.current) {
