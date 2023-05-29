@@ -9,6 +9,7 @@ const useStyles = createUseStyles({
     justifyContent: "space-between",
     alignItems: "center",
     padding: ["2rem", "3rem"],
+    zIndex: 99,
   },
   desktopNavItemsContainer: {
     listStyleType: "none",
@@ -41,6 +42,7 @@ const useStyles = createUseStyles({
     height: "100vh",
     background: "#ccc",
     padding: ["3rem", 0],
+    zIndex: 999,
   },
   mobileMenuCloseButton: {
     background: "none",

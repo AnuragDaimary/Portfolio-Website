@@ -3,7 +3,6 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles({
   selectedWorkContainer: {
     padding: "2rem",
-    maxWidth: "1200px",
     margin: "auto",
   },
   selectedWorkHeading: {

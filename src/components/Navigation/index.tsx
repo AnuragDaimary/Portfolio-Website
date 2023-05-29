@@ -8,13 +8,13 @@ import Resume from "assets/AnuragDaimaryResume.pdf";
 const navigationSections = [
   {
     props: {
-      href: "#selectedWork",
+      href: "/#selectedWork",
     },
     label: "Work",
   },
   {
     props: {
-      href: "#",
+      href: "/about",
     },
     label: "About",
   },
