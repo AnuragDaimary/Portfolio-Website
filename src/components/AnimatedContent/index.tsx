@@ -8,6 +8,7 @@ interface AnimatedContentProps {
   delay?: number;
   viewAnchor?: "top" | "bottom";
   initialDelay?: number;
+  from?: "top" | "bottom";
 }
 
 const AnimatedContent: React.FC<AnimatedContentProps> = ({
@@ -15,11 +16,12 @@ const AnimatedContent: React.FC<AnimatedContentProps> = ({
   delay = 0,
   viewAnchor = "bottom",
   initialDelay = 0.5,
+  from = "bottom",
 }) => {
   const [contentRef, contentInView] = useInView();
   const animationControls = useAnimation();
   const animateContent = {
-    hidden: { opacity: 0, y: 75 },
+    hidden: { opacity: 0, y: from === "bottom" ? 75 : -75 },
     visible: {
       opacity: 1,
       y: 0,
