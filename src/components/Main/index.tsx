@@ -1,6 +1,7 @@
 import React from "react";
 import useStyles from "components/Main/styles";
 import useGetScreenSize from "hooks/useGetScreenSize";
+import AnimatedContent from "components/AnimatedContent";
 
 const SCREEN_TO_CONTENT_MAP: Record<string, string[]> = {
   Mobile: [
@@ -33,9 +34,11 @@ const Main: React.FC = () => {
     <section className={main}>
       <h1 className={mainContentContainer}>
         {SCREEN_TO_CONTENT_MAP[screeSize].map((splitContent, idx) => (
-          <span className={mainContent} key={`main-content-${idx}`}>
-            {splitContent}
-          </span>
+          <AnimatedContent delay={idx * 0.1}>
+            <span className={mainContent} key={`main-content-${idx}`}>
+              {splitContent}
+            </span>
+          </AnimatedContent>
         ))}
       </h1>
     </section>

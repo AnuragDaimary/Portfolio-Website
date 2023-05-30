@@ -1,6 +1,7 @@
 import React from "react";
 import useStyles from "./styles";
 import Section from "./section";
+import AnimatedContent from "components/AnimatedContent";
 
 const aboutSectionContent = [
   [
@@ -24,6 +25,39 @@ const aboutSectionContent = [
   ],
 ];
 
+const contactContent = [
+  {
+    label: "Email",
+    props: {
+      href: "mailto:anuragdaimary.work@gmail.com",
+    },
+  },
+  {
+    label: "LinkedIn",
+    props: {
+      href: "https://linkedin.com/in/anuragdaimary/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+  },
+  {
+    label: "Behance",
+    props: {
+      href: "https://behance.net/anuragdaimec03",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+  },
+  {
+    label: "Instagram",
+    props: {
+      href: "https://instagram.com/anurag.daimary/",
+      target: "_blank",
+      rel: "noopener noreferrer",
+    },
+  },
+];
+
 const About: React.FC = () => {
   const {
     aboutSectionContainer,
@@ -34,12 +68,14 @@ const About: React.FC = () => {
   return (
     <div className={aboutSectionContainer}>
       <div className={aboutSection}>
-        {aboutSectionContent.map((section, idx) => (
-          <div className={sectionContentContainer} key={`about-section-${idx}`}>
-            {section.map((sectionContent, idx) => (
-              <p key={`about-section-${sectionContent}-${idx}`}>
-                {sectionContent}
-              </p>
+        {aboutSectionContent.map((section, i) => (
+          <div className={sectionContentContainer} key={`about-section-${i}`}>
+            {section.map((sectionContent, j) => (
+              <AnimatedContent delay={i * 0.2 + j * 0.1}>
+                <p key={`about-section-${sectionContent}-${j}`}>
+                  {sectionContent}
+                </p>
+              </AnimatedContent>
             ))}
           </div>
         ))}
@@ -49,8 +85,12 @@ const About: React.FC = () => {
         heading="Working Experience"
         content={
           <>
-            <h3>Designer | Certivity</h3>
-            <p>May 2018 &mdash; August 2018</p>
+            <AnimatedContent delay={0.25}>
+              <h3>Designer | Certivity</h3>
+            </AnimatedContent>
+            <AnimatedContent delay={0.5}>
+              <p>May 2018 &mdash; August 2018</p>
+            </AnimatedContent>
           </>
         }
       />
@@ -59,18 +99,13 @@ const About: React.FC = () => {
         heading="Get In Touch"
         content={
           <ul className={linksContainer}>
-            <li>
-              <a href="mailto:anuragdaimary.work@gmail.com">Email</a>
-            </li>
-            <li>
-              <a href="https://linkedin.com/in/anuragdaimary/">LinkedIn</a>
-            </li>
-            <li>
-              <a href="https://behance.net/anuragdaimec03">Behance</a>
-            </li>
-            <li>
-              <a href="https://instagram.com/anurag.daimary/">Instagram</a>
-            </li>
+            {contactContent.map((contactObj, idx) => (
+              <AnimatedContent delay={0.25 + idx * 0.1}>
+                <li key={`contact-${contactObj.label}-${idx}`}>
+                  <a {...contactObj.props}>{contactObj.label}</a>
+                </li>
+              </AnimatedContent>
+            ))}
           </ul>
         }
       />
@@ -79,10 +114,14 @@ const About: React.FC = () => {
         heading="Credits"
         content={
           <>
-            <h3>Pranshu Teotia | Developer</h3>
-            <p>
-              <a href="https://linkedin.com/in/pranshuteotia/">LinkedIn</a>
-            </p>
+            <AnimatedContent delay={0.25}>
+              <h3>Pranshu Teotia | Developer</h3>
+            </AnimatedContent>
+            <AnimatedContent delay={0.5}>
+              <p>
+                <a href="https://linkedin.com/in/pranshuteotia/">LinkedIn</a>
+              </p>
+            </AnimatedContent>
           </>
         }
       />

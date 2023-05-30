@@ -1,5 +1,6 @@
 import React from "react";
 import useStyles from "components/About/styles";
+import AnimatedContent from "components/AnimatedContent";
 
 interface SectionProps {
   heading: string;
@@ -11,7 +12,9 @@ const Section: React.FC<SectionProps> = ({ heading, content }) => {
     useStyles();
   return (
     <section className={aboutSectionContainer}>
-      <h2 className={aboutInfoHeading}>{heading}</h2>
+      <AnimatedContent>
+        <h2 className={aboutInfoHeading}>{heading}</h2>
+      </AnimatedContent>
       <div className={aboutInfoContentContainer}>{content}</div>
     </section>
   );

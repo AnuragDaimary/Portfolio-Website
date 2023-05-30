@@ -5,6 +5,7 @@ import Loblaws from "assets/images/Loblaws.webp";
 import LoblawsIntroVideo from "assets/videos/LoblawsIntro.mov";
 import Cura from "assets/images/Cura.webp";
 import Presto from "assets/images/Presto.webp";
+import AnimatedContent from "components/AnimatedContent";
 
 const SelectedWork: React.FC = () => {
   const { selectedWorkContainer, selectedWorkHeading, projectsContainer } =
@@ -12,7 +13,9 @@ const SelectedWork: React.FC = () => {
   return (
     <section className={selectedWorkContainer}>
       <h2 id="selectedWork" className={selectedWorkHeading}>
-        Selected Work
+        <AnimatedContent>
+          <>Selected Work</>
+        </AnimatedContent>
       </h2>
       <div className={projectsContainer}>
         <Project

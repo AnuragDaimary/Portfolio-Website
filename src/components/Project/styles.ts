@@ -38,7 +38,7 @@ const useStyles = createUseStyles({
   },
   projectName: {
     fontSize: "56px",
-    margin: ["2rem", 0]
+    margin: ["2rem", 0],
   },
   projectDescription: {
     textAlign: "left"
@@ -57,14 +57,14 @@ const useStyles = createUseStyles({
   skill: {
     padding: ["0.5rem", "1rem"],
     border: ["1px", "solid", "white"],
-    borderRadius: "20px"
+    borderRadius: "20px",
+    display: "inline-block",
   },
   caseStudyButton: {
     padding: ["1rem", "1.5rem"],
     borderRadius: "5px",
     background: "white",
     color: "black",
-    alignSelf: "center",
     border: "none",
     cursor: "pointer",
     "&[disabled]": {
@@ -82,6 +82,9 @@ const useStyles = createUseStyles({
     left: "50%",
     translate: "-50%"
   },
+  alignSelf: {
+    alignSelf: "center",
+  },
   "@media (min-width: 750px)": {
     projectContainer: {
       flexDirection: "row",
@@ -93,11 +96,14 @@ const useStyles = createUseStyles({
     imgContainer: {
       minWidth: "350px"
     },
-    caseStudyButton: {
+    alignSelf: {
       alignSelf: "flex-start"
     },
     skillsContainer: {
       justifyContent: "flex-start"
+    },
+    projectName: {
+      textAlign: "left",
     },
   },
 });
