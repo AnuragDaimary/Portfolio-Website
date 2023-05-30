@@ -4,10 +4,18 @@ import useStyles from "components/Loblaws/styles";
 
 const Loblaws: React.FC = () => {
   const { loblawsIntro, loblawsIntroVideo } = useStyles();
+  const loblawsIntroVideoRef = React.useRef<HTMLVideoElement>(null);
+
+  React.useEffect(() => {
+    if (loblawsIntroVideoRef.current) {
+      loblawsIntroVideoRef.current.muted = true;
+      loblawsIntroVideoRef.current.play();
+    }
+  }, []);
   return (
     <div>
       <div className={loblawsIntro}>
-        <video className={loblawsIntroVideo}>
+        <video ref={loblawsIntroVideoRef} className={loblawsIntroVideo}>
           <source src={LoblawsMain}></source>
         </video>
       </div>

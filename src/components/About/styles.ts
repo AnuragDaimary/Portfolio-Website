@@ -8,22 +8,33 @@ const useStyles = createUseStyles({
     margin: ["8rem", "auto"],
     textAlign: "left",
     width: "fit-content",
-    fontSize: "28px",
+    fontSize: "20px",
   },
   sectionContentContainer: {
     marginBottom: "2rem",
   },
   aboutInfoHeading: {
-    fontSize: "60px",
+    fontSize: "30px",
   },
   aboutInfoContentContainer: {
     width: "fit-content",
-    textAlign: "left",
+    textAlign: "center",
     margin: ["2rem", "auto"],
-    translate: "50%",
   },
   linksContainer: {
     listStyleType: "none",
+  },
+  "@media (min-width: 750px)": {
+    aboutInfoHeading: {
+      fontSize: "60px",
+    },
+    aboutSection: {
+      fontSize: "28px",
+    },
+    aboutInfoContentContainer: {
+      textAlign: "left",
+      translate: "50%",
+    }
   }
 });
 

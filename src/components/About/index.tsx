@@ -6,7 +6,7 @@ const aboutSectionContent = [
   [
     "I am a Product Designer and UX Researcher",
     "from Toronto. I create digital experiences for",
-    "people with a user centric approach. s",
+    "people with a user centric approach.",
   ],
   [
     "I specialize in visual design with a strong",
