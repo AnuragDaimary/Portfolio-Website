@@ -29,12 +29,16 @@ const navigationSections = [
 ];
 interface NavigationItemsProps {
   className?: string;
+  closeMenu?: () => void;
 }
-const NavigationItems: React.FC<NavigationItemsProps> = ({ className }) => {
+const NavigationItems: React.FC<NavigationItemsProps> = ({
+  className,
+  closeMenu,
+}) => {
   return (
     <>
       {navigationSections.map(({ props, label }, idx) => (
-        <li key={`navigation-item-${idx}`}>
+        <li key={`navigation-item-${idx}`} onClick={closeMenu}>
           <a className={className} {...props}>
             {label}
           </a>
@@ -62,12 +66,10 @@ const MobileNavigationContainer: React.FC<MobileNavigationContainerProps> = ({
 };
 
 interface MobileNavigationProps {
-  setIsMenuOpen: () => void;
+  closeMenu: () => void;
 }
 
-const MobileNavigation: React.FC<MobileNavigationProps> = ({
-  setIsMenuOpen,
-}) => {
+const MobileNavigation: React.FC<MobileNavigationProps> = ({ closeMenu }) => {
   const scrollPosition = React.useRef({
     top: window.scrollY,
     left: window.scrollX,
@@ -98,12 +100,12 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({
 
   return (
     <div className={mobileMenuContainer}>
-      <button className={mobileMenuCloseButton} onClick={setIsMenuOpen}>
+      <button className={mobileMenuCloseButton} onClick={closeMenu}>
         <FontAwesomeIcon icon={faXmark} />
       </button>
       <h2 className={mobileMenuHeading}>Menu</h2>
       <ul className={mobileNavItemsContainer}>
-        <NavigationItems className={mobileNavItem} />
+        <NavigationItems className={mobileNavItem} closeMenu={closeMenu} />
       </ul>
     </div>
   );
@@ -136,7 +138,7 @@ const Navigation: React.FC = () => {
         )}
       </nav>
       {isMobileView && isMenuOpen && (
-        <MobileNavigation setIsMenuOpen={() => setIsMenuOpen(false)} />
+        <MobileNavigation closeMenu={() => setIsMenuOpen(false)} />
       )}
     </>
   );
