@@ -20,6 +20,7 @@ const useStyles = createUseStyles({
     justifyContent: "center",
   },
   projectOverview: {
+    margin: "auto",
     marginTop: "2rem",
     border: ["1px", "solid", "white"],
     padding: "1rem",
@@ -27,8 +28,10 @@ const useStyles = createUseStyles({
     display: "flex",
     flexDirection: "column",
     background: "linear-gradient(to right, rgba(255,255,255, 0.1), rgba(255,255,255, 0.2))",
+    maxWidth: "700px",
   },
   projectOverviewHeading: {
+    fontSize: "24px",
     textAlign: "center",
     marginTop: "1rem",
   },
@@ -37,6 +40,78 @@ const useStyles = createUseStyles({
     "& > h4": {
       marginBottom: "0.5rem",
     }
+  },
+  loblawsSectionContainer: {
+    display: "flex",
+    flexDirection: "column",
+  },
+  loblawsSectionContent: {
+    padding: [0, "2rem"],
+    textAlign: "justify",
+    overflowX: "scroll",
+
+    "& > img": {
+      margin: ["1rem",  0],
+      width: "100%",
+    },
+
+    "& > p": {
+      marginBottom: "1rem",
+    }
+  },
+  loblawsSectionContentHeading: {
+    margin: ["2rem", 0],
+  },
+  loblawsSectionContentSubheading: {
+    margin: ["1rem", 0],
+  },
+  loblawsPrototype: {
+    width: "50%",
+    display: "block",
+    margin: ["1rem", "auto"],
+    borderRadius: "20px",
+  },
+  halfWidthImg: {},
+  prototypeButton: {
+    width: "fit-content",
+    display: "block",
+    margin: ["3rem", "auto"],
+    padding: ["0.5rem", 0],
+  },
+  prototypeLink: {
+    padding: ["0.5rem", "1rem"],
+    color: "black",
+    textDecoration: "none",
+  },
+  "@media (min-width: 750px)": {
+    projectOverviewHeading: {
+      fontSize: "48px",
+    },
+    loblawsSectionHeading: {
+      justifyContent: "flex-start",
+    },
+    loblawsSection: {
+      textAlign: "left",
+      padding: [0, "2rem"],
+    },
+    loblawsSectionContent: {
+      textAlign: "left",
+    },
+    loblawsSectionContainer: {
+      flexDirection: "row",
+      "& > div": {
+        flex: 1,
+      }
+    },
+    loblawsPrototype: {
+      width: "25%",
+      borderRadius: "30px"
+    },
+    halfWidthImg: {
+      display: "block",
+      margin: "auto !important",
+      width: "50% !important",
+    },
   }
 });
 
