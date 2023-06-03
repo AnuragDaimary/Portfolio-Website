@@ -44,12 +44,6 @@ const Project: React.FC<ProjectProps> = ({
     }
   };
 
-  React.useEffect(() => {
-    if (projectVideoRef.current) {
-      projectVideoRef.current.muted = true;
-    }
-  }, []);
-
   return (
     <div className={projectContainer}>
       <AnimatedContent viewAnchor="top" delay={0.5}>
@@ -67,7 +61,7 @@ const Project: React.FC<ProjectProps> = ({
           <img className={projectImage} src={img} alt={name} />
           {video && (
             <>
-              <video ref={projectVideoRef} className={projectVideo}>
+              <video muted ref={projectVideoRef} className={projectVideo}>
                 <source src={video} />
               </video>
               <p className={overlayText}>Read Case Study</p>

@@ -26,19 +26,21 @@ const Loblaws: React.FC = () => {
     halfWidthImg,
     prototypeButton,
     prototypeLink,
+    loblawsSectionContentTertiaryHeading,
+    loblawsSectionSubContent,
+    paddingLeft,
   } = useStyles();
   const loblawsIntroVideoRef = React.useRef<HTMLVideoElement>(null);
 
   React.useEffect(() => {
     if (loblawsIntroVideoRef.current) {
-      loblawsIntroVideoRef.current.muted = true;
       loblawsIntroVideoRef.current.play();
     }
   }, []);
   return (
     <div>
       <div className={loblawsIntro}>
-        <video ref={loblawsIntroVideoRef} className={loblawsIntroVideo}>
+        <video muted ref={loblawsIntroVideoRef} className={loblawsIntroVideo}>
           <source src={LoblawsMain}></source>
         </video>
       </div>
@@ -139,28 +141,35 @@ const Loblaws: React.FC = () => {
             Loblaws website.
           </p>
 
-          <h5>Heuristic Evaluation</h5>
-          <p>
-            We evaluated the Loblaws website and mobile app on the basis of
-            Nielson Norman’s ten rules of usability. These are a set of
-            principles that help evaluate an interface for issues. This method
-            can help detect many critical issues early in the design process
-            that can be avoided.
-          </p>
+          <div className={loblawsSectionSubContent}>
+            <h5 className={loblawsSectionContentTertiaryHeading}>
+              Heuristic Evaluation
+            </h5>
+            <p>
+              We evaluated the Loblaws website and mobile app on the basis of
+              Nielson Norman’s ten rules of usability. These are a set of
+              principles that help evaluate an interface for issues. This method
+              can help detect many critical issues early in the design process
+              that can be avoided.
+            </p>
 
-          <h5>S.W.O.T Analysis</h5>
-          <p>
-            We conducted a S.W.O.T. analysis between Loblaws and its competitors
-            (Walmart and Costco) which identified each of their Strengths,
-            Weaknesses, Opportunities for improvement and possible Threats.
-          </p>
-          <p>
-            This was especially helpful as it would point out if any of the
-            competitor is capitalizing on any of Loblaws’s weaknesses. We would
-            also find out where the competitors are lacking and can incorporate
-            design changes to address them gaining an advantage over the
-            competition.
-          </p>
+            <h5 className={loblawsSectionContentTertiaryHeading}>
+              S.W.O.T Analysis
+            </h5>
+            <p>
+              We conducted a S.W.O.T. analysis between Loblaws and its
+              competitors (Walmart and Costco) which identified each of their
+              Strengths, Weaknesses, Opportunities for improvement and possible
+              Threats.
+            </p>
+            <p>
+              This was especially helpful as it would point out if any of the
+              competitor is capitalizing on any of Loblaws’s weaknesses. We
+              would also find out where the competitors are lacking and can
+              incorporate design changes to address them gaining an advantage
+              over the competition.
+            </p>
+          </div>
 
           <h4 className={loblawsSectionContentSubheading}>User Interview</h4>
           <p>
@@ -172,17 +181,21 @@ const Loblaws: React.FC = () => {
             bias unless they did so themselves.
           </p>
 
-          <h5>Findings</h5>
-          <ul>
-            <li>Interruptions occur while adding items to cart</li>
-            <li>
-              Item substitution feature is turned on by default and is not
-              prominently visible
-            </li>
-            <li>Limited locations available for delivery</li>
-            <li>Users face difficulty switching between delivery and pickup</li>
-            <li>User is forced to create an account to use their services</li>
-          </ul>
+          <div className={loblawsSectionSubContent}>
+            <h5 className={loblawsSectionContentTertiaryHeading}>Findings</h5>
+            <ul className={paddingLeft}>
+              <li>Interruptions occur while adding items to cart</li>
+              <li>
+                Item substitution feature is turned on by default and is not
+                prominently visible
+              </li>
+              <li>Limited locations available for delivery</li>
+              <li>
+                Users face difficulty switching between delivery and pickup
+              </li>
+              <li>User is forced to create an account to use their services</li>
+            </ul>
+          </div>
 
           <h4 className={loblawsSectionContentSubheading}>User Persona</h4>
           <img src={UserPersonna} alt="user personna" />
@@ -212,7 +225,7 @@ const Loblaws: React.FC = () => {
       <LoblawsSection id="04" heading="Defining the Problem">
         <div className={loblawsSectionContent}>
           <p>It was identified during the research that:</p>
-          <ul>
+          <ul className={paddingLeft}>
             <li>
               Loblaws suffers from a broken flow of navigation which often leads
               to site abandonment by a section of users who are reluctant to
@@ -274,7 +287,7 @@ const Loblaws: React.FC = () => {
             Low Fidelity Prototype
           </h4>
 
-          <video controls className={loblawsPrototype}>
+          <video muted controls className={loblawsPrototype}>
             <source src={LoblawsPrototype} />
           </video>
 

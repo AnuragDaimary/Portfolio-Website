@@ -15,14 +15,19 @@ const useStyles = createUseStyles({
   },
   aboutInfoHeading: {
     fontSize: "30px",
+    textAlign: "left",
   },
   aboutInfoContentContainer: {
     width: "fit-content",
-    textAlign: "center",
+    textAlign: "left",
     margin: ["2rem", "auto"],
   },
   linksContainer: {
     listStyleType: "none",
+  },
+  fitContent: {
+    width: "fit-content",
+    margin: "auto",
   },
   "@media (min-width: 750px)": {
     aboutInfoHeading: {

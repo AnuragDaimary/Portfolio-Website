@@ -47,8 +47,7 @@ const useStyles = createUseStyles({
   },
   loblawsSectionContent: {
     padding: [0, "2rem"],
-    textAlign: "justify",
-    overflowX: "scroll",
+    textAlign: "left",
 
     "& > img": {
       margin: ["1rem",  0],
@@ -61,9 +60,20 @@ const useStyles = createUseStyles({
   },
   loblawsSectionContentHeading: {
     margin: ["2rem", 0],
+    fontSize: "32px",
+    fontWeight: "bold",
   },
   loblawsSectionContentSubheading: {
+    fontSize: "24px",
     margin: ["1rem", 0],
+  },
+  loblawsSectionContentTertiaryHeading: {
+    margin: ["1rem", 0],
+    fontSize: "22px",
+    fontWeight: "lighter",
+  },
+  loblawsSectionSubContent: {
+    margin: ["2rem", 0, "2rem", "1rem"],
   },
   loblawsPrototype: {
     width: "50%",
@@ -82,6 +92,9 @@ const useStyles = createUseStyles({
     padding: ["0.5rem", "1rem"],
     color: "black",
     textDecoration: "none",
+  },
+  paddingLeft: {
+    paddingLeft: "1rem",
   },
   "@media (min-width: 750px)": {
     projectOverviewHeading: {
@@ -112,6 +125,9 @@ const useStyles = createUseStyles({
       margin: "auto !important",
       width: "50% !important",
     },
+    loblawsSectionSubContent: {
+      marginLeft: "2rem",
+    }
   }
 });
 

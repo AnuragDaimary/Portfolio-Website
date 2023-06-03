@@ -2,7 +2,8 @@ import React from "react";
 import useStyles from "components/SelectedWork/styles";
 import Project from "components/Project";
 import Loblaws from "assets/images/Loblaws.webp";
-import LoblawsIntroVideo from "assets/videos/LoblawsIntro.mov";
+import LoblawsIntroVideo from "assets/videos/LoblawsIntro.mp4";
+import PrestoIntroVideo from "assets/videos/PrestoIntro.mp4";
 import Cura from "assets/images/Cura.webp";
 import Presto from "assets/images/Presto.webp";
 import AnimatedContent from "components/AnimatedContent";
@@ -49,6 +50,7 @@ const SelectedWork: React.FC = () => {
           ]}
           skills={["UI Design"]}
           img={Presto}
+          video={PrestoIntroVideo}
         />
       </div>
     </section>
