@@ -30,8 +30,7 @@ const SCREEN_TO_CONTENT_MAP: Record<ScreenType, any[]> = {
       Hi, I am <span className="highlight">Anurag</span>, a Product designer and
       UX Researcher
     </>,
-    "making digital experiences for people with a user centric",
-    "approach.",
+    "making digital experiences for people with a user centric approach.",
   ],
 };
 
