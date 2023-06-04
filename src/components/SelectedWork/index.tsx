@@ -9,15 +9,24 @@ import Presto from "assets/images/Presto.webp";
 import AnimatedContent from "components/AnimatedContent";
 
 const SelectedWork: React.FC = () => {
+  const headingRef = React.useRef<HTMLHeadingElement>(null);
   const { selectedWorkContainer, selectedWorkHeading, projectsContainer } =
     useStyles();
+
+  React.useEffect(() => {
+    const currentUrl = window.location.href;
+
+    if (currentUrl.endsWith("#selectedWork")) {
+      headingRef.current?.scrollIntoView();
+    }
+  }, []);
   return (
     <section className={selectedWorkContainer}>
-      <h2 id="selectedWork" className={selectedWorkHeading}>
-        <AnimatedContent>
-          <>Selected Work</>
-        </AnimatedContent>
-      </h2>
+      <AnimatedContent>
+        <h2 ref={headingRef} id="selectedWork" className={selectedWorkHeading}>
+          Selected Work
+        </h2>
+      </AnimatedContent>
       <div className={projectsContainer}>
         <Project
           name="Loblaws"

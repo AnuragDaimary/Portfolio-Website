@@ -3,6 +3,8 @@ import { createUseStyles } from "react-jss";
 const useStyles = createUseStyles({
   loblawsIntro: {
     height: "100vh",
+    position: "relative",
+    zIndex: 1,
   },
   loblawsIntroVideo: {
     height: "100%",
@@ -95,6 +97,15 @@ const useStyles = createUseStyles({
   },
   paddingLeft: {
     paddingLeft: "1rem",
+  },
+  backgroundCover: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: 0,
+    background: "black",
+    width: "100vw",
+    height: "100vh",
   },
   "@media (min-width: 750px)": {
     projectOverviewHeading: {

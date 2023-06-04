@@ -34,10 +34,8 @@ const Main: React.FC = () => {
     <section className={main}>
       <h1 className={mainContentContainer}>
         {SCREEN_TO_CONTENT_MAP[screeSize].map((splitContent, idx) => (
-          <AnimatedContent delay={idx * 0.1}>
-            <span className={mainContent} key={`main-content-${idx}`}>
-              {splitContent}
-            </span>
+          <AnimatedContent key={`main-content-${idx}`} delay={idx * 0.1}>
+            <span className={mainContent}>{splitContent}</span>
           </AnimatedContent>
         ))}
       </h1>

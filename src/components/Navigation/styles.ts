@@ -40,7 +40,7 @@ const useStyles = createUseStyles({
     let: 0,
     width: "100vw",
     height: "100vh",
-    background: "#ccc",
+    background: "#222",
     padding: ["3rem", 0],
     zIndex: 999,
   },

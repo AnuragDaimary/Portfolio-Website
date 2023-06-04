@@ -77,18 +77,24 @@ const Project: React.FC<ProjectProps> = ({
 
         <div className={projectDescription}>
           {description.map((desc, idx) => (
-            <AnimatedContent initialDelay={1.25} delay={0.1 * idx}>
-              <p key={`${name}-desc-${idx}`}>{desc}</p>
+            <AnimatedContent
+              key={`${name}-desc-${idx}`}
+              initialDelay={1.25}
+              delay={0.1 * idx}
+            >
+              <p>{desc}</p>
             </AnimatedContent>
           ))}
         </div>
 
         <div className={skillsContainer}>
           {skills.map((skillName, idx) => (
-            <AnimatedContent initialDelay={1.5} delay={0.1 * idx}>
-              <span className={skill} key={`${name}-skill-${idx}`}>
-                {skillName}
-              </span>
+            <AnimatedContent
+              key={`${name}-skill-${idx}`}
+              initialDelay={1.5}
+              delay={0.1 * idx}
+            >
+              <span className={skill}>{skillName}</span>
             </AnimatedContent>
           ))}
         </div>

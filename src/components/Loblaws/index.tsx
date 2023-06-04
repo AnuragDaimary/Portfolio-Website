@@ -29,6 +29,7 @@ const Loblaws: React.FC = () => {
     loblawsSectionContentTertiaryHeading,
     loblawsSectionSubContent,
     paddingLeft,
+    backgroundCover,
   } = useStyles();
   const loblawsIntroVideoRef = React.useRef<HTMLVideoElement>(null);
 
@@ -39,6 +40,7 @@ const Loblaws: React.FC = () => {
   }, []);
   return (
     <div>
+      <div className={backgroundCover}></div>
       <div className={loblawsIntro}>
         <video muted ref={loblawsIntroVideoRef} className={loblawsIntroVideo}>
           <source src={LoblawsMain}></source>

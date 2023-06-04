@@ -72,10 +72,11 @@ const About: React.FC = () => {
         {aboutSectionContent.map((section, i) => (
           <div className={sectionContentContainer} key={`about-section-${i}`}>
             {section.map((sectionContent, j) => (
-              <AnimatedContent delay={i * 0.2 + j * 0.1}>
-                <p key={`about-section-${sectionContent}-${j}`}>
-                  {sectionContent}
-                </p>
+              <AnimatedContent
+                key={`about-section-${sectionContent}-${j}`}
+                delay={i * 0.2 + j * 0.1}
+              >
+                <p>{sectionContent}</p>
               </AnimatedContent>
             ))}
           </div>
@@ -102,8 +103,11 @@ const About: React.FC = () => {
           content={
             <ul className={linksContainer}>
               {contactContent.map((contactObj, idx) => (
-                <AnimatedContent delay={0.25 + idx * 0.1}>
-                  <li key={`contact-${contactObj.label}-${idx}`}>
+                <AnimatedContent
+                  key={`contact-${contactObj.label}-${idx}`}
+                  delay={0.25 + idx * 0.1}
+                >
+                  <li>
                     <a {...contactObj.props}>{contactObj.label}</a>
                   </li>
                 </AnimatedContent>

@@ -34,11 +34,12 @@ const Navigation: React.FC = () => {
     return (
       <ul className={desktopNavItemsContainer}>
         {navigationSections.map(({ props, label }, idx) => (
-          <AnimatedContent from="top" initialDelay={1.25 + 0.1 * idx}>
-            <li
-              key={`navigation-item-${idx}`}
-              onClick={() => setIsMenuOpen(false)}
-            >
+          <AnimatedContent
+            key={`navigation-item-${idx}`}
+            from="top"
+            initialDelay={1.25 + 0.1 * idx}
+          >
+            <li onClick={() => setIsMenuOpen(false)}>
               <a {...props}>{label}</a>
             </li>
           </AnimatedContent>
@@ -56,7 +57,9 @@ const Navigation: React.FC = () => {
           </p>
         </AnimatedContent>
         {isMobileView ? (
-          <MobileNavigationContainer onClick={() => setIsMenuOpen(true)} />
+          <AnimatedContent from="top" initialDelay={1.2}>
+            <MobileNavigationContainer onClick={() => setIsMenuOpen(true)} />
+          </AnimatedContent>
         ) : (
           renderDesktopNavigation()
         )}
