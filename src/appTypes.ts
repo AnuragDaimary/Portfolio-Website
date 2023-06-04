@@ -1,0 +1,1 @@
+export type ScreenType = "Desktop" | "Tablet" | "Mobile";

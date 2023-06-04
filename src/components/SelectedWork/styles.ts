@@ -1,4 +1,5 @@
 import { createUseStyles } from "react-jss";
+import { Colors } from "utils/styleConstants";
 
 const useStyles = createUseStyles({
   selectedWorkContainer: {
@@ -7,6 +8,7 @@ const useStyles = createUseStyles({
   },
   selectedWorkHeading: {
     textAlign: "center",
+    color: Colors.PrimaryText
   },
   projectsContainer: {
     display: "flex",

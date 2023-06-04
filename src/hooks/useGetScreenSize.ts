@@ -1,5 +1,5 @@
 import React, { useCallback } from "react";
-import { SCREENS, SCREEN_TYPE } from "utils/styleUtils";
+import { SCREEN_SIZE, SCREEN_TYPE } from "utils/styleConstants";
 
 const useGetScreenSize = () => {
   const [screenSize, setScreenSize] = React.useState<string>(SCREEN_TYPE.Mobile);
@@ -7,12 +7,12 @@ const useGetScreenSize = () => {
   const getScreenType = () => {
     const windowWidth = window.innerWidth;
 
-    if (windowWidth <= SCREENS.Mobile) {
-      return SCREEN_TYPE.Mobile;
-    } else if (windowWidth <= SCREENS.Laptop) {
+    if (windowWidth >= SCREEN_SIZE.Desktop) {
+      return SCREEN_TYPE.Desktop;
+    } else if (windowWidth >= SCREEN_SIZE.Tablet) {
       return SCREEN_TYPE.Tablet;
     } else {
-      return SCREEN_TYPE.Laptop;
+      return SCREEN_TYPE.Mobile;
     }
   }
 

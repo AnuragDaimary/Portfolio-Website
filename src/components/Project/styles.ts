@@ -41,7 +41,9 @@ const useStyles = createUseStyles({
     margin: ["2rem", 0],
   },
   projectDescription: {
-    textAlign: "left"
+    textAlign: "left",
+    width: "fit-content",
+    margin: "auto",
   },
   projectInfo: {
     display: "flex",
@@ -92,6 +94,9 @@ const useStyles = createUseStyles({
       "&:nth-child(even)": {
         flexDirection: "row-reverse"
       }
+    },
+    projectDescription: {
+      width: "100%",
     },
     imgContainer: {
       minWidth: "350px"

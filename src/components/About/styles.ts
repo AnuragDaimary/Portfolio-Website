@@ -8,7 +8,7 @@ const useStyles = createUseStyles({
     margin: ["8rem", "auto"],
     textAlign: "left",
     width: "fit-content",
-    fontSize: "20px",
+    fontSize: "18px",
   },
   sectionContentContainer: {
     marginBottom: "2rem",
@@ -28,6 +28,11 @@ const useStyles = createUseStyles({
   fitContent: {
     width: "fit-content",
     margin: "auto",
+  },
+  "@media (min-width: 400px)": {
+    aboutSection: {
+      fontSize: "24px",
+    }
   },
   "@media (min-width: 750px)": {
     aboutInfoHeading: {

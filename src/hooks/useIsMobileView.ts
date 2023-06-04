@@ -1,5 +1,5 @@
 import React from "react";
-import { SCREENS } from "utils/styleUtils";
+import { SCREEN_SIZE } from "utils/styleConstants";
 
 const useIsMobileView = () => {
   const [windowWidth, setWindowWidth] = React.useState(window.innerWidth);
@@ -14,7 +14,7 @@ const useIsMobileView = () => {
     }
   }, []);
 
-  return windowWidth <= SCREENS.Mobile;
+  return windowWidth <= SCREEN_SIZE.Mobile;
 }
 
 export default useIsMobileView;

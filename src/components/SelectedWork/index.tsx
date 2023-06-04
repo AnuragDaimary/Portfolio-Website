@@ -7,11 +7,19 @@ import PrestoIntroVideo from "assets/videos/PrestoIntro.mp4";
 import Cura from "assets/images/Cura.webp";
 import Presto from "assets/images/Presto.webp";
 import AnimatedContent from "components/AnimatedContent";
+import {
+  CuraContent,
+  LoblawsContent,
+  PrestoContent,
+} from "components/SelectedWork/workContent";
+import useGetScreenSize from "hooks/useGetScreenSize";
+import { ScreenType } from "appTypes";
 
 const SelectedWork: React.FC = () => {
   const headingRef = React.useRef<HTMLHeadingElement>(null);
   const { selectedWorkContainer, selectedWorkHeading, projectsContainer } =
     useStyles();
+  const screenSize = useGetScreenSize() as ScreenType;
 
   React.useEffect(() => {
     const currentUrl = window.location.href;
@@ -30,10 +38,7 @@ const SelectedWork: React.FC = () => {
       <div className={projectsContainer}>
         <Project
           name="Loblaws"
-          description={[
-            "Re-designing the digital experience of Canada's leading",
-            "supermarket chain with usability in mind",
-          ]}
+          description={LoblawsContent[screenSize]}
           skills={["UX Research", "UI/UX Design", "Case Study"]}
           img={Loblaws}
           video={LoblawsIntroVideo}
@@ -42,21 +47,14 @@ const SelectedWork: React.FC = () => {
 
         <Project
           name="Cura"
-          description={[
-            "Healthcare system bridging the distance between woman",
-            "living in remote communities and accessible parental care",
-            "using modern day biotechnology",
-          ]}
+          description={CuraContent[screenSize]}
           skills={["UX Research", "UI/UX Design"]}
           img={Cura}
         />
 
         <Project
           name="Presto"
-          description={[
-            "Wearable concept for electronic payment system of Toronto’s",
-            "public transit system",
-          ]}
+          description={PrestoContent[screenSize]}
           skills={["UI Design"]}
           img={Presto}
           video={PrestoIntroVideo}
