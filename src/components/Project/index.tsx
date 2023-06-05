@@ -50,19 +50,24 @@ const Project: React.FC<ProjectProps> = ({
         <div
           className={imgContainer}
           onClick={handleProjectClick}
-          onMouseOver={() => projectVideoRef.current?.play()}
-          onMouseOut={() => {
+          onPointerOver={() => {
             if (projectVideoRef.current) {
-              projectVideoRef.current.pause();
               projectVideoRef.current.currentTime = 0;
+              projectVideoRef.current.play();
             }
           }}
         >
           <img className={projectImage} src={img} alt={name} />
           {video && (
             <>
-              <video muted ref={projectVideoRef} className={projectVideo}>
-                <source src={video} />
+              <video
+                muted
+                playsInline
+                autoPlay
+                ref={projectVideoRef}
+                className={projectVideo}
+              >
+                <source src={video} type="video/mp4" />
               </video>
               <p className={overlayText}>Read Case Study</p>
             </>
