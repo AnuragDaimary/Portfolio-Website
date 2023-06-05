@@ -31,19 +31,13 @@ const Loblaws: React.FC = () => {
     paddingLeft,
     backgroundCover,
   } = useStyles();
-  const loblawsIntroVideoRef = React.useRef<HTMLVideoElement>(null);
 
-  React.useEffect(() => {
-    if (loblawsIntroVideoRef.current) {
-      loblawsIntroVideoRef.current.play();
-    }
-  }, []);
   return (
     <div>
       <div className={backgroundCover}></div>
       <div className={loblawsIntro}>
-        <video muted ref={loblawsIntroVideoRef} className={loblawsIntroVideo}>
-          <source src={LoblawsMain}></source>
+        <video muted autoPlay loop playsInline className={loblawsIntroVideo}>
+          <source src={LoblawsMain} type="video/mp4"></source>
         </video>
       </div>
 
