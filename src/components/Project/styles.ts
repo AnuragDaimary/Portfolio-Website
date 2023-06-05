@@ -43,7 +43,7 @@ const useStyles = createUseStyles({
   projectDescription: {
     textAlign: "left",
     width: "fit-content",
-    margin: "auto",
+    margin: [0, "auto"],
   },
   projectInfo: {
     display: "flex",
