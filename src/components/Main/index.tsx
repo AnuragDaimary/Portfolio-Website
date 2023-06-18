@@ -18,7 +18,7 @@ const SCREEN_TO_CONTENT_MAP: Record<ScreenType, any[]> = {
   ],
   Tablet: [
     <>
-      Hi, I am
+      {"Hi, I am "}
       <span className="highlight">Anurag</span>, a product designer
     </>,
     "and a UX researcher making digital",
@@ -30,7 +30,8 @@ const SCREEN_TO_CONTENT_MAP: Record<ScreenType, any[]> = {
       Hi, I am <span className="highlight">Anurag</span>, a Product designer and
       UX Researcher
     </>,
-    "making digital experiences for people with a user centric approach.",
+    "making digital experiences for people with a user",
+    "centric approach."
   ],
 };
 
@@ -43,7 +44,7 @@ const Main: React.FC = () => {
       <h1 className={mainContentContainer}>
         {SCREEN_TO_CONTENT_MAP[screeSize].map(
           (splitContent: string, idx: number) => (
-            <AnimatedContent key={`main-content-${idx}`} delay={idx * 0.1}>
+            <AnimatedContent key={`main-content-${idx}`} delay={idx * 0.15}>
               <span className={mainContent}>{splitContent}</span>
             </AnimatedContent>
           )

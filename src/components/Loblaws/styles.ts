@@ -104,7 +104,7 @@ const useStyles = createUseStyles({
     left: 0,
     zIndex: 0,
     background: "black",
-    width: "100vw",
+    width: "100%",
     height: "100vh",
   },
   "@media (min-width: 750px)": {

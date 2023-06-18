@@ -14,6 +14,7 @@ const About: React.FC = () => {
     sectionContentContainer,
     linksContainer,
     fitContent,
+    aboutInfoContent,
   } = useStyles();
   return (
     <div className={aboutSectionContainer}>
@@ -38,10 +39,10 @@ const About: React.FC = () => {
           content={
             <>
               <AnimatedContent delay={0.25}>
-                <h3>Designer | Certivity</h3>
+                <h3 className={aboutInfoContent}>Designer | Certivity</h3>
               </AnimatedContent>
               <AnimatedContent delay={0.5}>
-                <p>May 2018 &mdash; August 2018</p>
+                <p className={aboutInfoContent}>May 2018 &mdash; August 2018</p>
               </AnimatedContent>
             </>
           }
@@ -57,7 +58,7 @@ const About: React.FC = () => {
                   delay={0.25 + idx * 0.1}
                 >
                   <li>
-                    <a {...contactObj.props}>{contactObj.label}</a>
+                    <a className={aboutInfoContent} {...contactObj.props}>{contactObj.label}</a>
                   </li>
                 </AnimatedContent>
               ))}
@@ -70,11 +71,11 @@ const About: React.FC = () => {
           content={
             <>
               <AnimatedContent delay={0.25}>
-                <h3>Pranshu Teotia | Developer</h3>
+                <h3 className={aboutInfoContent}>Pranshu Teotia | Developer</h3>
               </AnimatedContent>
               <AnimatedContent delay={0.5}>
                 <p>
-                  <a href="https://linkedin.com/in/pranshuteotia/">LinkedIn</a>
+                  <a className={aboutInfoContent} href="https://linkedin.com/in/pranshuteotia/">LinkedIn</a>
                 </p>
               </AnimatedContent>
             </>

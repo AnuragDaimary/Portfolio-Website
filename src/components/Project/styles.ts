@@ -63,8 +63,8 @@ const useStyles = createUseStyles({
     display: "inline-block",
   },
   caseStudyButton: {
-    padding: ["1rem", "1.5rem"],
-    borderRadius: "5px",
+    padding: ["1rem", "1.4rem"],
+    borderRadius: "30px",
     background: "white",
     color: "black",
     border: "none",
@@ -72,10 +72,14 @@ const useStyles = createUseStyles({
     "&[disabled]": {
       background: "rgba(255,255,255,0.5)",
       cursor: "default",
+      fontWeight: "bold",
+      fontSize: "1.1rem",
     },
     "& > a": {
       color: "black",
-      textDecoration: "none"
+      textDecoration: "none",
+      fontWeight: "bold",
+      fontSize: "1.1rem",
     }
   },
   overlayText: {

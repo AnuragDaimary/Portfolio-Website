@@ -7,11 +7,14 @@ const useStyles = createUseStyles({
     placeItems: "center",
   },
   mainContentContainer: {
-    fontSize: "48px"
+    fontSize: "48px",
+    display: "flex",
+    flexDirection: "column",
+    gap: "0.5rem",
   },
   mainContent: {
     display: "block",
-    textAlign:"left"
+    textAlign:"left",
   },
   "@media (max-width: 850px)": {
     mainContentContainer: {

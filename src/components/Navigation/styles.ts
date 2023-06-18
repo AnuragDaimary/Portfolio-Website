@@ -10,6 +10,10 @@ const useStyles = createUseStyles({
     alignItems: "center",
     padding: ["2rem", "3rem"],
     zIndex: 99,
+
+    "& a": {
+      textDecoration: "none",
+    }
   },
   desktopNavItemsContainer: {
     listStyleType: "none",
@@ -20,6 +24,9 @@ const useStyles = createUseStyles({
     listStyleType: "none",
     "& > :first-child": {
       borderTop: ["1px", "solid", "white"],
+    },
+    "& a": {
+      textDecoration: "none",
     }
   },
   mobileNavItem: {
@@ -59,6 +66,14 @@ const useStyles = createUseStyles({
   },
   mobileMenuHeading: {
     margin: ["2rem", 0]
+  },
+  "@media (min-width: 600px)": {
+    nav: {
+      padding: ["45px", "90px"],
+    },
+    desktopNavItemsContainer: {
+      gap: "80px",
+    }
   }
 });
 

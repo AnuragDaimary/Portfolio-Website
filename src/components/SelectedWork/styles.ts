@@ -8,7 +8,8 @@ const useStyles = createUseStyles({
   },
   selectedWorkHeading: {
     textAlign: "center",
-    color: Colors.PrimaryText
+    color: Colors.PrimaryText,
+    fontSize: "32px",
   },
   projectsContainer: {
     display: "flex",
