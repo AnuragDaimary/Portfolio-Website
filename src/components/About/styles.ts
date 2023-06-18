@@ -11,7 +11,8 @@ const useStyles = createUseStyles({
     fontSize: "18px",
   },
   sectionContentContainer: {
-    marginBottom: "2rem",
+    marginBottom: "3rem",
+    fontWeight: "600"
   },
   aboutInfoHeading: {
     fontSize: "30px",
@@ -21,6 +22,11 @@ const useStyles = createUseStyles({
     width: "fit-content",
     textAlign: "left",
     margin: ["2rem", "auto"],
+    fontSize: "24px",
+  },
+  aboutInfoContent: {
+    fontFamily: "Helvetica",
+    textDecoration: "none",
   },
   linksContainer: {
     listStyleType: "none",
@@ -44,6 +50,9 @@ const useStyles = createUseStyles({
     aboutInfoContentContainer: {
       textAlign: "left",
       translate: "50%",
+    },
+    sectionContentContainer: {
+      marginBottom: "4rem"
     }
   }
 });
